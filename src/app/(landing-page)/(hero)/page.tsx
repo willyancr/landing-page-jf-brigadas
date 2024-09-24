@@ -1,5 +1,11 @@
+import Header from "@/app/components/header";
+import Home from "@/app/components/home";
+
 export default function HeroSection() {
   return (
-    <div>JF Brigadas</div>
+    <div>
+      <Header />
+      <Home />
+    </div>
   );
 }
