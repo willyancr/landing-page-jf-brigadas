@@ -27,7 +27,7 @@ export default function RotatingPhrases() {
     const interval = setInterval(() => {
       // Atualiza a frase atual, avançando para a próxima e voltando ao início quando chegar ao fim
       setCurrentPhrase((prevPhrase) => (prevPhrase + 1) % phrases.length);
-    }, 10000);
+    }, 8000);
 
     // Função de limpeza para remover o intervalo quando o componente for desmontado
     return () => clearInterval(interval);
@@ -42,6 +42,7 @@ export default function RotatingPhrases() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
+          className="space-y-2"
         >
           <p className="text-5xl font-bold text-zinc-50">
             {phrases[currentPhrase].title}

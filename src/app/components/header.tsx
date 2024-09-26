@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 z-50 block w-full bg-primary/90 text-secondary">
-      <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between py-4 px-12">
+    <header className="block w-full bg-primary text-secondary">
+      <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-12 py-4">
         <Image
           src="/logo-2.png"
           alt="JF Brigadas"
@@ -16,7 +16,7 @@ export default function Header() {
         <nav>
           <ul className="flex items-center gap-6">
             <li>
-              <Link href="#sobre" className="transition-all hover:text-zinc-50">
+              <Link href="#about" className="transition-all hover:text-zinc-50">
                 Sobre o Curso
               </Link>
             </li>
@@ -42,7 +42,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Button className="bg-secondary font-bold uppercase text-primary hover:text-zinc-50 shadow-lg">
+              <Button className="bg-secondary font-bold uppercase text-primary shadow-lg hover:text-zinc-50">
                 Inscreva-se
               </Button>
             </li>
