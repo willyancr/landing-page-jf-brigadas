@@ -11,7 +11,7 @@ export default function Instructors() {
       <div className="flex items-center gap-2 border-l-2 border-secondary pl-2">
         <Image
           src="/icon-instrutores.png"
-          alt="icon brigadas"
+          alt="icon instrutores"
           width={30}
           height={30}
           quality={100}

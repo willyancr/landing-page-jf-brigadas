@@ -11,6 +11,16 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "image-bombeiros": "url('/bg-hero.jpeg')",
+        "image-gallery": "url('/bg-gallery.svg')",
+      },
+      animation: {
+        modal: "modal .4s ease-in-out ",
+      },
+      keyframes: {
+        modal: {
+          "0%": { transform: "scale(.8)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
       },
       colors: {
         background: "hsl(var(--background))",
