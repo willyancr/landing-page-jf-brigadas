@@ -1,6 +1,7 @@
 import About from "@/app/components/about";
 import Header from "@/app/components/header";
 import Home from "@/app/components/home";
+import Instructors from "@/app/components/instructors";
 
 export default function HeroSection() {
   return (
@@ -8,6 +9,7 @@ export default function HeroSection() {
       <Header />
       <Home />
       <About />
+      <Instructors />
     </div>
   );
 }

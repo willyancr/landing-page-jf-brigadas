@@ -13,7 +13,7 @@ export default function Home() {
         className="absolute inset-0 h-full w-full object-cover brightness-50"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-16">
-        <div className="border-secondary flex h-[270px] max-w-[1200px] items-center rounded-sm border-l-2 bg-gradient-to-r from-secondary/20 px-12">
+        <div className="flex h-[270px] max-w-[1200px] items-center rounded-sm border-l-2 border-secondary bg-gradient-to-r from-secondary/20 px-12">
           <RotatingPhrases />
         </div>
         <h1 className="flex flex-col items-center gap-4 text-2xl font-bold text-zinc-300">

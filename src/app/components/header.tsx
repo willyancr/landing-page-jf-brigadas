@@ -22,7 +22,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="#instrutores"
+                href="#instructors"
                 className="transition-all hover:text-zinc-50"
               >
                 Instrutores
@@ -39,6 +39,11 @@ export default function Header() {
             <li>
               <Link href="#faq" className="transition-all hover:text-zinc-50">
                 FAQ
+              </Link>
+            </li>
+            <li>
+              <Link href="#empresa" className="transition-all hover:text-zinc-50">
+                Empresa
               </Link>
             </li>
             <li>
