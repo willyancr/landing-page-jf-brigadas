@@ -29,21 +29,21 @@ const images: ImageItem[] = [
   },
   { id: "4", src: "/image-curso-brigadista.jpg", alt: "Descrição da imagem 4" },
   {
-    id: "1",
+    id: "5",
     src: "/image-curso-brigadista.jpg",
     alt: "Descrição da imagem 1",
   },
   {
-    id: "2",
+    id: "6",
     src: "/image-curso-brigadista.jpg",
     alt: "Descrição da imagem 2",
   },
   {
-    id: "3",
+    id: "7",
     src: "/image-curso-brigadista.jpg",
     alt: "Descrição da imagem 3",
   },
-  { id: "4", src: "/image-curso-brigadista.jpg", alt: "Descrição da imagem 4" },
+  { id: "8", src: "/image-curso-brigadista.jpg", alt: "Descrição da imagem 4" },
 ];
 
 export function GalleryImages() {
