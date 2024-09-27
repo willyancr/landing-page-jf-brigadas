@@ -30,7 +30,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="#contato"
+                href="#contact"
                 className="transition-all hover:text-zinc-50"
               >
                 Contato

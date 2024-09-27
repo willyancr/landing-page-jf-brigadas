@@ -64,7 +64,9 @@
     @apply bg-background text-foreground;
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* scrollbar */
 *::-webkit-scrollbar {
   width: 8px;

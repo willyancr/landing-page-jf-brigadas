@@ -12,6 +12,7 @@ const config: Config = {
       backgroundImage: {
         "image-bombeiros": "url('/bg-hero.jpeg')",
         "image-gallery": "url('/bg-gallery.svg')",
+        "image-instructors": "url('/bg-instructors.svg')",
       },
       animation: {
         modal: "modal .4s ease-in-out ",

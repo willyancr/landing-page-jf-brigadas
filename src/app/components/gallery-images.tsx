@@ -14,33 +14,33 @@ interface ImageItem {
 const images: ImageItem[] = [
   {
     id: "1",
-    src: "/image-profile-bombeiro-3.jpeg",
+    src: "/image-curso-brigadista.jpg",
     alt: "Descrição da imagem 1",
   },
   {
     id: "2",
-    src: "/image-profile-bombeiro-1.jpeg",
+    src: "/image-curso-brigadista.jpg",
     alt: "Descrição da imagem 2",
   },
   {
     id: "3",
-    src: "/image-profile-bombeiro-2.jpeg",
+    src: "/image-curso-brigadista.jpg",
     alt: "Descrição da imagem 3",
   },
   { id: "4", src: "/image-curso-brigadista.jpg", alt: "Descrição da imagem 4" },
   {
     id: "1",
-    src: "/image-profile-bombeiro-3.jpeg",
+    src: "/image-curso-brigadista.jpg",
     alt: "Descrição da imagem 1",
   },
   {
     id: "2",
-    src: "/image-profile-bombeiro-1.jpeg",
+    src: "/image-curso-brigadista.jpg",
     alt: "Descrição da imagem 2",
   },
   {
     id: "3",
-    src: "/image-profile-bombeiro-2.jpeg",
+    src: "/image-curso-brigadista.jpg",
     alt: "Descrição da imagem 3",
   },
   { id: "4", src: "/image-curso-brigadista.jpg", alt: "Descrição da imagem 4" },

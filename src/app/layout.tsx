@@ -15,7 +15,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "JF Brigadas",
-  description: "Curso de Brigadas de Incêdios, Bombeiros Civil, APH-B Prático e outros",
+  description:
+    "Curso de Brigadas de Incêdios, Bombeiros Civil, APH-B Prático e outros",
 };
 
 export default function RootLayout({
