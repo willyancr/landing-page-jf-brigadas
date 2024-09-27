@@ -12,8 +12,9 @@ export default function Contact() {
           quality={100}
         />
         <h1 className="flex items-center gap-2 text-4xl font-semibold">
-          Contato
+          Contatos
         </h1>
+        <div></div>
       </div>
     </div>
   );
