@@ -10,17 +10,43 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "image-bombeiros": "url('/bg-hero.jpeg')",
-        "image-gallery": "url('/bg-gallery.svg')",
-        "image-instructors": "url('/bg-instructors.svg')",
+        ["image-bombeiros"]: "url(/bg-hero.jpeg)",
+        ["image-gallery"]: "url(/bg-gallery.svg)",
+        ["image-instructors"]: "url(/bg-instructors.svg)",
+        ["image-card-info"]: "url(/bg-contact-card-info.svg)",
+        ["image-faq"]: "url(/bg-faq.svg)",
       },
       animation: {
         modal: "modal .4s ease-in-out ",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
       keyframes: {
         modal: {
-          "0%": { transform: "scale(.8)", opacity: "0" },
-          "100%": { transform: "scale(1)", opacity: "1" },
+          "0%": {
+            transform: "scale(.8)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
+        },
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       colors: {

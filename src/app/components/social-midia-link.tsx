@@ -5,7 +5,7 @@ export default function SocialMediaLink({
   return (
     <a
       target="_blank"
-      className="transition-all hover:text-secondary"
+      className="transition-all hover:text-secondary flex items-center gap-2"
       {...props}
     >
       {children}

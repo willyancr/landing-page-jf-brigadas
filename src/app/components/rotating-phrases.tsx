@@ -34,7 +34,7 @@ export default function RotatingPhrases() {
   }, [phrases.length]);
 
   return (
-    <div className="w-[700px]">
+    <div className="w-full max-w-[700px] px-4 sm:px-6 lg:px-8">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentPhrase}
@@ -44,10 +44,10 @@ export default function RotatingPhrases() {
           transition={{ duration: 0.5 }}
           className="space-y-2"
         >
-          <p className="text-5xl font-bold text-zinc-50">
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-50">
             {phrases[currentPhrase].title}
           </p>
-          <p className="text-xl text-zinc-200">
+          <p className="text-base sm:text-lg md:text-xl text-zinc-200">
             {phrases[currentPhrase].description}
           </p>
         </motion.div>

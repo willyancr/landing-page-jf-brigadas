@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CardCoursesBombeiroCivil() {
   return (
@@ -18,8 +19,17 @@ export default function CardCoursesBombeiroCivil() {
               Detalhes do Curso
             </span>
           </div>
-          <Button className="mt-2 bg-primary transition-all hover:bg-secondary sm:mt-0">
-            +Detalhes
+          <Button className="bg-primary transition-all hover:bg-secondary sm:mt-0">
+            <Link href="#faqs" className="flex items-center gap-2">
+              <span>INFO</span>
+              <Image
+                src="/icon-info.png"
+                alt="icon brigadas"
+                width={18}
+                height={18}
+                quality={100}
+              />
+            </Link>
           </Button>
         </div>
 
