@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { scaleAnimation } from "../lib/animation";
 
 interface ImageItem {
   id: string;
@@ -54,7 +55,7 @@ export function GalleryImages() {
 
   return (
     <div className="bg-image-gallery bg-cover bg-center bg-no-repeat">
-      <div className="container mx-auto max-w-[1200px] px-12 py-16">
+      <div className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
         <div className="mb-16 flex items-center gap-2 border-l-2 border-secondary pl-2">
           <Image
             src="/icon-galeria.png"
@@ -71,8 +72,8 @@ export function GalleryImages() {
           {images.map((image) => (
             <motion.div
               key={image.id}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              {...scaleAnimation}
+              transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
               onClick={() => openImage(image)}
               className="cursor-pointer overflow-hidden rounded-lg shadow-lg"
             >
@@ -90,14 +91,14 @@ export function GalleryImages() {
       </div>
 
       <Dialog open={!!selectedImage} onOpenChange={closeImage}>
-        <DialogContent className="max-w-3xl">
+        <DialogContent className="w-[400px] sm:w-full sm:max-w-3xl">
           {selectedImage && (
             <Image
               src={selectedImage.src}
               alt={selectedImage.alt}
               width={800}
               height={600}
-              className="animate-modal h-full w-full rounded-lg object-contain"
+              className="h-full w-full animate-modal rounded-lg object-contain"
             />
           )}
         </DialogContent>

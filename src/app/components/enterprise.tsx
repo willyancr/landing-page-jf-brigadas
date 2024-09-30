@@ -6,9 +6,9 @@ export default function Enterprise() {
   return (
     <div
       id="enterprise"
-      className="container mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-12 py-8 sm:py-12 lg:py-16"
+      className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16"
     >
-      <div className="mb-8 sm:mb-12 lg:mb-16 flex items-center gap-2 border-l-2 border-secondary pl-2">
+      <div className="mb-8 flex items-center gap-2 border-l-2 border-secondary pl-2 sm:mb-12 lg:mb-16">
         <Image
           src="/icon-empresa.png"
           alt="icon empresa"
@@ -16,24 +16,26 @@ export default function Enterprise() {
           height={36}
           quality={100}
         />
-        <h1 className="flex items-center gap-2 text-2xl sm:text-3xl lg:text-4xl font-semibold">
+        <h1 className="flex items-center gap-2 text-2xl font-semibold sm:text-3xl lg:text-4xl">
           Nossa Empresa
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 rounded-lg bg-image-card-info p-4 sm:p-6 text-zinc-50 shadow-lg">
-        <div className="flex items-center justify-center md:border-r border-secondary/50">
+      <div className="grid grid-cols-1 gap-6 rounded-lg bg-image-card-info p-4 text-zinc-50 shadow-lg sm:p-6 md:grid-cols-2">
+        <div className="flex items-center justify-center border-secondary/50 md:border-r">
           <Image
             src="/logo-2.png"
             alt="icon contato"
             width={300}
             height={300}
             quality={100}
-            className="mb-4 max-w-full h-auto"
+            className="mb-4 h-auto max-w-full"
           />
         </div>
         <div className="flex flex-col gap-4">
-          <h2 className="text-2xl sm:text-3xl font-semibold">JF Brigadas</h2>
-          <div className="flex flex-col gap-3 text-gray-300 text-sm sm:text-base">
+          <h2 className="text-center text-2xl font-semibold sm:text-3xl">
+            JF Brigadas
+          </h2>
+          <div className="flex flex-col gap-3 text-sm text-gray-300 sm:text-base">
             {[
               "Prestamos serviços para eventos temporários conforme a ANT 26 do CBMTO.",
               "Bombeiros civis profissionais, treinados e capacitados, com foco na prevenção, proteção coletiva e bem-estar social.",
@@ -44,12 +46,12 @@ export default function Enterprise() {
               "Emitimos nota fiscal.",
             ].map((item) => (
               <div key={item} className="flex items-start gap-2">
-                <FaAngleRight className="text-secondary flex-shrink-0 mt-1" />
+                <FaAngleRight className="mt-1 flex-shrink-0 text-secondary" />
                 <p>{item}</p>
               </div>
             ))}
           </div>
-          <Button className="w-full sm:w-fit bg-secondary text-primary">
+          <Button className="w-full bg-secondary text-primary sm:w-fit">
             <a
               href="https://wa.me/5563999595787"
               target="_blank"

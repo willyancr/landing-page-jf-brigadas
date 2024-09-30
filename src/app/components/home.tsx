@@ -3,7 +3,7 @@ import RotatingPhrases from "./rotating-phrases";
 import { ChevronsDown } from "lucide-react";
 export default function Home() {
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen w-full">
       <Image
         src="/bg-hero2.jpg"
         alt="Hero"

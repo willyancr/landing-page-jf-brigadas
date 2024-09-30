@@ -5,7 +5,10 @@ import CardCoursesAPH from "./card-courses-aph";
 
 export default function About() {
   return (
-    <div id="about" className="mx-auto max-w-[1200px] px-12 py-16">
+    <div
+      id="about"
+      className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16"
+    >
       <div className="flex flex-col gap-24">
         <div className="flex items-center gap-2 border-l-2 border-secondary pl-2">
           <Image

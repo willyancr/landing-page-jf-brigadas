@@ -1,10 +1,16 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { leftAnimation } from "../lib/animation";
 
 export default function CardCoursesDetails() {
   return (
-    <div className="flex w-full flex-col gap-6 rounded-lg bg-zinc-100 p-4 shadow-lg lg:grid lg:grid-cols-2 lg:gap-12 lg:p-10">
+    <motion.div
+      className="flex w-full flex-col gap-6 rounded-lg bg-zinc-100 p-4 shadow-lg lg:grid lg:grid-cols-2 lg:gap-12 lg:p-10"
+      {...leftAnimation}
+    >
       <Image
         src="/image-curso-brigadista.jpg"
         alt="imagem curso brigadista"
@@ -50,7 +56,7 @@ export default function CardCoursesDetails() {
             situações de risco e salvar vidas.
           </p>
         </div>
-        <div className="xs:flex-row xs:items-center flex items-start justify-between gap-4">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div className="flex items-center gap-3">
             <div className="rounded-full bg-secondary/30 p-4">
               <Image
@@ -103,6 +109,6 @@ export default function CardCoursesDetails() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

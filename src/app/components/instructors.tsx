@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import SocialMediaLink from "./social-midia-link";
+import { motion } from "framer-motion";
+import { scaleAnimation } from "../lib/animation";
 
 export default function Instructors() {
   return (
@@ -8,7 +11,7 @@ export default function Instructors() {
       id="instructors"
       className="bg-image-instructors bg-cover bg-center bg-no-repeat"
     >
-      <div className="container mx-auto max-w-[1200px] px-12 py-16">
+      <div className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
         <div className="flex items-center gap-2 border-l-2 border-secondary pl-2">
           <Image
             src="/icon-instrutores.png"
@@ -22,7 +25,11 @@ export default function Instructors() {
           </h1>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg">
+          <motion.div
+            className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
+            {...scaleAnimation}
+            transition={{ duration: 0.5 }}
+          >
             <Image
               src="/image-profile-bombeiro-1.jpeg"
               alt="imagem do instrutor"
@@ -32,7 +39,6 @@ export default function Instructors() {
               className="w-full rounded-md"
             />
             <h2 className="text-2xl font-bold">Instrutor 1</h2>
-            {/* <div className="border-b-2 border-secondary w-20 rounded-md" /> */}
 
             <p className="text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
@@ -50,8 +56,12 @@ export default function Instructors() {
                 <FaLinkedin size={24} />
               </SocialMediaLink>
             </div>
-          </div>
-          <div className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg">
+          </motion.div>
+          <motion.div
+            {...scaleAnimation}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
+          >
             <Image
               src="/image-profile-medical-1.jpeg"
               alt="imagem do instrutor"
@@ -77,8 +87,12 @@ export default function Instructors() {
                 <FaLinkedin size={24} />
               </SocialMediaLink>
             </div>
-          </div>
-          <div className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg">
+          </motion.div>
+          <motion.div
+            {...scaleAnimation}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
+          >
             <Image
               src="/image-profile-bombeiro-2.jpeg"
               alt="imagem do instrutor"
@@ -104,8 +118,12 @@ export default function Instructors() {
                 <FaLinkedin size={24} />
               </SocialMediaLink>
             </div>
-          </div>
-          <div className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg">
+          </motion.div>
+          <motion.div
+            {...scaleAnimation}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
+          >
             <Image
               src="/image-profile-bombeiro-3.jpeg"
               alt="imagem do instrutor"
@@ -131,7 +149,7 @@ export default function Instructors() {
                 <FaLinkedin size={24} />
               </SocialMediaLink>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

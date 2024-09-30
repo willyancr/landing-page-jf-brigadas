@@ -9,7 +9,7 @@ import {
 export default function Faqs() {
   return (
     <div id="faqs" className="bg-image-faq bg-cover bg-center bg-no-repeat">
-      <div className="container mx-auto max-w-[1200px] px-12 py-16">
+      <div className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
         <div className="mb-16 flex items-center gap-2 border-l-2 border-secondary pl-2">
           <Image
             src="/icon-faq.png"
@@ -58,7 +58,7 @@ export default function Faqs() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
-                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                  <AccordionTrigger className="text-start text-base md:text-lg lg:text-xl">
                     É necessário ter experiência prévia para fazer o curso?
                   </AccordionTrigger>
                   <AccordionContent>
@@ -98,7 +98,7 @@ export default function Faqs() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                  <AccordionTrigger className="text-base md:text-lg lg:text-xl text-start">
                     O curso de bombeiro civil é reconhecido por algum órgão?
                   </AccordionTrigger>
                   <AccordionContent>

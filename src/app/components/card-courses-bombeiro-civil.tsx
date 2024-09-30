@@ -1,10 +1,16 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { upAnimation } from "../lib/animation";
 
 export default function CardCoursesBombeiroCivil() {
   return (
-    <div className="flex w-full flex-col gap-6 rounded-lg bg-zinc-100 p-4 shadow-lg lg:grid lg:grid-cols-2 lg:gap-12 lg:p-10">
+    <motion.div
+      className="flex w-full flex-col gap-6 rounded-lg bg-zinc-100 p-4 shadow-lg lg:grid lg:grid-cols-2 lg:gap-12 lg:p-10"
+      {...upAnimation}
+    >
       <div className="flex flex-col gap-4">
         <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center">
           <div className="flex items-center gap-2">
@@ -41,7 +47,7 @@ export default function CardCoursesBombeiroCivil() {
             proteger vidas.
           </p>
         </div>
-        <div className="xs:flex-row xs:items-center flex items-start justify-between gap-4">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div className="flex items-center gap-3">
             <div className="rounded-full bg-secondary/30 p-4">
               <Image
@@ -106,6 +112,6 @@ export default function CardCoursesBombeiroCivil() {
         quality={100}
         className="h-auto w-full rounded-xl object-cover shadow-xl"
       />
-    </div>
+    </motion.div>
   );
 }

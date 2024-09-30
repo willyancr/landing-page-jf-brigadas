@@ -19,7 +19,7 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact" className="container mx-auto max-w-[1200px] px-12 py-16">
+    <div id="contact" className="container mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-12 py-8 sm:py-12 lg:py-16">
       <div className="mb-16 flex items-center gap-2 border-l-2 border-secondary pl-2">
         <Image
           src="/icon-contato.png"

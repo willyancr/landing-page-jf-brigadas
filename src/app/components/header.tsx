@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -25,7 +25,7 @@ export default function Header() {
           width={100}
           height={100}
           quality={100}
-          className="md:w-[120px] md:h-[100px]"
+          className="md:w-[100px] md:h-[80px]"
         />
         
         {/* Menu hambúrguer para telas menores */}
@@ -49,11 +49,11 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-            <li>
+            {/* <li>
               <Button className="bg-secondary font-bold uppercase text-primary shadow-lg hover:text-zinc-50 w-full md:w-auto">
                 Inscreva-se
               </Button>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>
