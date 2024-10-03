@@ -85,13 +85,13 @@ export default function BrigadaIncendio() {
             <div className="rounded-lg bg-white p-6 pb-20 shadow-md">
               <h2 className="mb-4 text-2xl font-bold">Sobre o curso</h2>
               <div className="space-y-2 text-sm text-zinc-500">
-                <p>
+              <p>
                   A brigada é treinada para identificar e mitigar riscos de
                   incêndio, como instalações elétricas inadequadas e
                   armazenamento incorreto de materiais inflamáveis.
                 </p>
 
-                <h3 className="font-bold">Resposta Rápida e eficiente:</h3>
+                <h3 className="font-bold">Resposta rápida e eficiente:</h3>
                 <p>
                   Em caso de incêndio, uma brigada bem treinada pode agir
                   rapidamente para combater as chamas e evitar sua propagação,
@@ -102,8 +102,8 @@ export default function BrigadaIncendio() {
                 <h3 className="font-bold">Evacuação segura:</h3>
                 <p>
                   A brigada é responsável por organizar e conduzir a evacuação
-                  segura de pessoas, garantindo que todos saibam as rotas de
-                  fuga e procedimentos de segurança.
+                  segura de pessoas, garantindo que todos conheçam as rotas de
+                  fuga e os procedimentos de segurança.
                 </p>
 
                 <h3 className="font-bold">Primeiros socorros:</h3>
@@ -123,7 +123,7 @@ export default function BrigadaIncendio() {
                 <p>
                   O treinamento adequado pode fazer a diferença entre salvar
                   vidas e sofrer perdas irreparáveis, além de minimizar danos
-                  materiais. Investir em treinamento de brigada de incêndio é,
+                  materiais. Investir no treinamento da brigada de incêndio é,
                   portanto, um investimento em segurança e bem-estar para todos
                   os ocupantes de um edifício ou estabelecimento.
                 </p>

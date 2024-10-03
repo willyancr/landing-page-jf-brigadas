@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 
-export default function BombeiroCivil() {
+export default function BrigadaIncendio() {
   return (
     <div>
       <Header />
@@ -18,8 +18,8 @@ export default function BombeiroCivil() {
           <div className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
             <div className="flex gap-12">
               <Image
-                src="/image-curso-bombeiro-civil.jpg"
-                alt="imagem curso bombeiro civil"
+                src="/image-curso-brigadista.jpg"
+                alt="imagem curso brigadista"
                 width={500}
                 height={500}
                 quality={100}
@@ -27,12 +27,12 @@ export default function BombeiroCivil() {
               />
               <div className="flex w-[500px] flex-col gap-4">
                 <h1 className="text-2xl font-bold">
-                  Curso: Bombeiro Profissional Civil
+                  Curso: Treinamento de Brigada de Incêndio
                 </h1>
 
                 <div className="flex gap-2">
                   <Badge variant="outline" className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" /> 310h
+                    <Clock className="h-3 w-3" /> 40h
                   </Badge>
                   <Badge variant="outline" className="flex items-center gap-1">
                     <Users className="h-3 w-3" /> Iniciante
@@ -43,9 +43,9 @@ export default function BombeiroCivil() {
                 </div>
 
                 <p className="text-sm text-zinc-500">
-                  Capacite-se em combate a incêndio, salvamentos e primeiros
-                  socorros, tornando-se um bombeiro profissional civil preparado
-                  para agir em emergências e proteger vidas.
+                  Aprenda técnicas avançadas de combate a incêndio e primeiros
+                  socorros, tornando-se um profissional capacitado para atuar em
+                  situações de risco e salvar vidas.
                 </p>
 
                 <div className="flex items-center gap-4">
@@ -86,103 +86,46 @@ export default function BombeiroCivil() {
               <h2 className="mb-4 text-2xl font-bold">Sobre o curso</h2>
               <div className="space-y-2 text-sm text-zinc-500">
                 <p>
-                  O curso de <strong>Bombeiro Profissional Civil</strong> é uma
-                  formação essencial para quem deseja atuar na prevenção e
-                  combate a incêndios, além de prestar primeiros socorros em
-                  situações de emergência. Abaixo, estão alguns detalhes
-                  importantes sobre o curso:
+                  A brigada é treinada para identificar e mitigar riscos de
+                  incêndio, como instalações elétricas inadequadas e
+                  armazenamento incorreto de materiais inflamáveis.
                 </p>
 
-                <h3 className="text-lg font-bold">Duração e Carga Horária</h3>
+                <h3 className="font-bold">Resposta Rápida e eficiente:</h3>
                 <p>
-                  O curso geralmente tem uma duração de cerca de 2 meses,
-                  totalizando aproximadamente 310 horas de aulas.
+                  Em caso de incêndio, uma brigada bem treinada pode agir
+                  rapidamente para combater as chamas e evitar sua propagação,
+                  utilizando extintores e outros equipamentos de combate a
+                  incêndios.
                 </p>
 
-                <h3 className="text-lg font-bold">Conteúdo</h3>
+                <h3 className="font-bold">Evacuação segura:</h3>
                 <p>
-                  O curso é dividido em módulos que incluem tanto aulas teóricas
-                  quanto práticas.
+                  A brigada é responsável por organizar e conduzir a evacuação
+                  segura de pessoas, garantindo que todos saibam as rotas de
+                  fuga e procedimentos de segurança.
                 </p>
 
-                <h3 className="text-lg font-bold">
-                  Grade Curricular do Curso de Bombeiro Profissional Civil
-                </h3>
-
-                <h4 className="text-lg font-bold">Módulo I</h4>
-                <ul>
-                  <li>Anatomia Humana – carga horária: 10 horas</li>
-                  <li>
-                    Atendimento Pré-Hospitalar Básico – carga horária: 70 horas
-                  </li>
-                </ul>
-
-                <h4 className="text-lg font-bold">Módulo II</h4>
-                <ul>
-                  <li>
-                    Atividade Operacional do Bombeiro Profissional Civil – carga
-                    horária: 20 horas
-                  </li>
-                  <li>Produtos Perigosos – carga horária: 12 horas</li>
-                  <li>
-                    Fundamentos da Análise de Risco – carga horária: 8 horas
-                  </li>
-                </ul>
-
-                <h4 className="text-lg font-bold">Módulo III</h4>
-                <ul>
-                  <li>
-                    Salvamento Terrestre e Salvamento em Alturas – carga
-                    horária: 50 horas
-                  </li>
-                  <li>EPI e EPR – carga horária: 20 horas</li>
-                </ul>
-
-                <h4 className="text-lg font-bold">Módulo IV</h4>
-                <ul>
-                  <li>Ordem Unida</li>
-                  <li>Boas Maneiras</li>
-                  <li>Legislação Específica do Bombeiro Profissional Civil</li>
-                  <li>Atividade Física Direcionada</li>
-                  <li>Estágio Supervisionado – total: 60 horas</li>
-                </ul>
-
-                <h4 className="text-lg font-bold">Módulo V</h4>
-                <ul>
-                  <li>
-                    Equipamentos de Combate a Incêndio e Auxiliares – carga
-                    horária: 30 horas
-                  </li>
-                  <li>
-                    Prevenção e Combate a Incêndio / Técnicas de Combate a
-                    Incêndio – carga horária: 30 horas
-                  </li>
-                </ul>
-
-                <h3 className="text-lg font-bold">Avaliação</h3>
+                <h3 className="font-bold">Primeiros socorros:</h3>
                 <p>
-                  Os alunos são avaliados separadamente em teoria e prática.
-                  Para obter o certificado, é necessário um aproveitamento
-                  mínimo de 70% em cada módulo.
+                  Além de combater incêndios, os membros da brigada são
+                  treinados em primeiros socorros, podendo prestar assistência
+                  imediata até a chegada dos serviços de emergência.
                 </p>
 
-                <h3 className="text-lg font-bold">Reciclagem</h3>
+                <h3 className="font-bold">Cumprimento legal:</h3>
                 <p>
-                  Após a conclusão do curso básico, é obrigatório realizar um
-                  curso de reciclagem anualmente para manter a certificação
-                  atualizada.
+                  A brigada de incêndio é uma exigência legal para empresas e
+                  condomínios, evitando multas e outras penalidades.
                 </p>
 
-                <h3 className="text-lg font-bold">Instituições</h3>
+                <h3 className="font-bold">Proteção de vidas e patrimônio:</h3>
                 <p>
-                  O curso deve ser realizado em uma instituição de ensino
-                  autorizada pelo Corpo de Bombeiros do estado.
-                </p>
-
-                <p className="underline">
-                  Se você está pensando em seguir essa carreira, é uma excelente
-                  escolha para quem deseja contribuir para a segurança e o
-                  bem-estar da comunidade.
+                  O treinamento adequado pode fazer a diferença entre salvar
+                  vidas e sofrer perdas irreparáveis, além de minimizar danos
+                  materiais. Investir em treinamento de brigada de incêndio é,
+                  portanto, um investimento em segurança e bem-estar para todos
+                  os ocupantes de um edifício ou estabelecimento.
                 </p>
               </div>
               <div className="my-10 border-b-2 border-zinc-200" />
