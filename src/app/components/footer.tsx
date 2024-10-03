@@ -12,7 +12,7 @@ import SocialMediaLink from "./social-midia-link";
 export default function Footer() {
   return (
     <div className="bg-primary">
-      <div className="mx-auto max-w-[1200px] px-4 pb-6 pt-16 text-zinc-50 md:px-12">
+      <div className="mx-auto max-w-[1200px] px-4 pb-6 pt-4 text-zinc-50 md:px-12">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-0">
           <div className="mt-8 flex flex-col items-center gap-2 md:items-start">
             <Image

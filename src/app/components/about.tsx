@@ -23,10 +23,11 @@ export default function About() {
           </h1>
         </div>
         <div className="flex flex-col gap-14">
+
           <CardCoursesDetails />
           <CardCoursesBombeiroCivil />
-
           <CardCoursesAPH />
+          
         </div>
       </div>
     </div>

@@ -26,8 +26,8 @@ export default function CardCoursesBombeiroCivil() {
             </span>
           </div>
           <Button className="bg-primary transition-all hover:bg-secondary sm:mt-0">
-            <Link href="#faqs" className="flex items-center gap-2">
-              <span>INFO</span>
+            <Link href="#bombeiro-civil" className="flex items-center gap-2">
+              <span>FAQs</span>
               <Image
                 src="/icon-info.png"
                 alt="icon brigadas"

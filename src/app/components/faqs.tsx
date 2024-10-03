@@ -79,7 +79,7 @@ export default function Faqs() {
               </Accordion>
             </div>
           </div>
-          <div className="space-y-4">
+          <div id="bombeiro-civil" className="space-y-4">
             <h1 className="text-3xl font-semibold text-secondary">
               Curso de Bombeiro Civil
             </h1>
@@ -139,7 +139,7 @@ export default function Faqs() {
               </Accordion>
             </div>
           </div>
-          <div className="space-y-4">
+          <div id="aph-b" className="space-y-4">
             <h1 className="text-3xl font-semibold text-secondary">
               Curso de APH-B Prático
             </h1>
