@@ -73,8 +73,15 @@ export default function BombeiroCivil() {
               </div>
               <div className="ml-auto">
                 <Button className="bg-primary text-white hover:bg-secondary hover:text-primary">
-                  FAÇA UM ORÇAMENTO
-                  <FaWhatsapp className="ml-2 h-5 w-5" />
+                  <a
+                    href="https://wa.me/5563999595787"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 uppercase"
+                  >
+                    Faça um orçamento
+                    <FaWhatsapp size={20} />
+                  </a>
                 </Button>
               </div>
             </div>

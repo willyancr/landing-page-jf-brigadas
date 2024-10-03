@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { upAnimation } from "../lib/animation";
 import { ArrowRightFromLine } from "lucide-react";
 
-export default function CardCoursesBombeiroCivil() {
+export default function CardCoursesSBV() {
   return (
     <motion.div
       className="flex w-full flex-col gap-6 rounded-lg bg-zinc-100 p-4 shadow-lg lg:grid lg:grid-cols-2 lg:gap-12 lg:p-10"
@@ -16,8 +16,8 @@ export default function CardCoursesBombeiroCivil() {
         <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center">
           <div className="flex items-center gap-2">
             <Image
-              src="/icon-bombeiro.png"
-              alt="icon brigadas"
+              src="/icon-sbv.png"
+              alt="icon sbv"
               width={24}
               height={24}
               quality={100}
@@ -28,7 +28,7 @@ export default function CardCoursesBombeiroCivil() {
           </div>
           <Button className="bg-primary transition-all hover:bg-secondary hover:text-zinc-950 sm:mt-0">
             <Link
-              href="/curso/bombeiro-civil"
+              href="/curso/suporte-basico-vida"
               className="flex items-center gap-2"
             >
               <span>Detalhes Curso</span>
@@ -38,11 +38,12 @@ export default function CardCoursesBombeiroCivil() {
         </div>
 
         <div className="mb-4 space-y-2">
-          <h1 className="text-3xl font-bold lg:text-4xl">Bombeiro Civil</h1>
+          <h1 className="text-3xl font-bold lg:text-4xl">
+            Suporte Básico de Vida (SBV)
+          </h1>
           <p className="text-base text-zinc-500 lg:text-lg">
-            Capacite-se em combate a incêndio, salvamentos e primeiros socorros,
-            tornando-se um bombeiro civil preparado para agir em emergências e
-            proteger vidas.
+            Aprimore suas habilidades no atendimento de Suporte Básico de Vida
+            com o curso de SBV e faça a diferença na área da saúde e do socorro.
           </p>
         </div>
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
@@ -76,17 +77,14 @@ export default function CardCoursesBombeiroCivil() {
         <div className="my-4 border-b-2 border-secondary/10" />
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {[
-            { id: 1, title: "Prevenção e Combate a Incêndios" },
-            { id: 2, title: "Resgate em Altura e Espaços Confinados" },
-            { id: 3, title: "Primeiros Socorros e Atendimento Pré-Hospitalar" },
-            {
-              id: 4,
-              title: "Uso de Equipamentos de Proteção Individual (EPIs)",
-            },
-            { id: 5, title: "Operação de Sistemas de Hidrantes" },
-            { id: 6, title: "Evacuação e Controle de Multidões" },
-            { id: 7, title: "Técnicas de Salvamento Aquático" },
-            { id: 8, title: "Simulações Práticas de Emergências" },
+            { id: 1, title: "Identificação de Situações de Emergência" },
+            { id: 2, title: "Procedimentos em Casos de Choque" },
+            { id: 3, title: "Ressuscitação Cardiopulmonar (RCP)" },
+            { id: 4, title: "Desobstrução de Vias Aéreas" },
+            { id: 5, title: "Uso do Desfibrilador Externo Automático (DEA)" },
+            { id: 6, title: "Controle de Hemorragias" },
+            { id: 7, title: "Imobilização e Transporte de Vítimas" },
+            { id: 8, title: "Prevenção e Controle de Infecções" },
           ].map((item) => (
             <div key={item.id} className="flex items-center gap-1">
               <Image
@@ -103,8 +101,8 @@ export default function CardCoursesBombeiroCivil() {
       </div>
 
       <Image
-        src="/image-curso-bombeiro-civil.jpg"
-        alt="imagem curso bombeiro civil"
+        src="/image-curso-sbv.jpg"
+        alt="imagem curso Suporte Básico de Vida "
         width={500}
         height={500}
         quality={100}

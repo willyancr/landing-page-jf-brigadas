@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 
-export default function BrigadaIncendio() {
+export default function SuporteBasicoVida() {
   return (
     <div>
       <Header />
@@ -18,8 +18,8 @@ export default function BrigadaIncendio() {
           <div className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
             <div className="flex gap-12">
               <Image
-                src="/image-curso-brigadista.jpg"
-                alt="imagem curso brigadista"
+                src="/image-curso-sbv.jpg"
+                alt="imagem curso sbv"
                 width={500}
                 height={500}
                 quality={100}
@@ -27,15 +27,15 @@ export default function BrigadaIncendio() {
               />
               <div className="flex w-[500px] flex-col gap-4">
                 <h1 className="text-2xl font-bold">
-                  Curso: Treinamento de Brigada de Incêndio
+                  Curso: Suporte Básico de Vida (SBV)
                 </h1>
 
                 <div className="flex gap-2">
                   <Badge variant="outline" className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" /> 40h
+                    <Clock className="h-3 w-3" /> 30h
                   </Badge>
                   <Badge variant="outline" className="flex items-center gap-1">
-                    <Users className="h-3 w-3" /> Iniciante
+                    <Users className="h-3 w-3" /> Profissional
                   </Badge>
                   <Badge variant="outline" className="flex items-center gap-1">
                     <Calendar className="h-3 w-3" /> Presencial
@@ -43,9 +43,9 @@ export default function BrigadaIncendio() {
                 </div>
 
                 <p className="text-sm text-zinc-500">
-                  Aprenda técnicas avançadas de combate a incêndio e primeiros
-                  socorros, tornando-se um profissional capacitado para atuar em
-                  situações de risco e salvar vidas.
+                  Aprimore suas habilidades no atendimento de Suporte Básico de
+                  Vida com o curso de SBV e faça a diferença na área da saúde e
+                  do socorro.
                 </p>
 
                 <div className="flex items-center gap-4">
@@ -91,53 +91,67 @@ export default function BrigadaIncendio() {
           <div className="relative -mt-20 grid grid-cols-[70%_30%] gap-10">
             <div className="rounded-lg bg-white p-6 pb-20 shadow-md">
               <h2 className="mb-4 text-2xl font-bold">Sobre o curso</h2>
-
               <div className="space-y-2 text-sm text-zinc-500">
                 <p>
-                  A brigada é treinada para identificar e mitigar riscos de
-                  incêndio, como instalações elétricas inadequadas e
-                  armazenamento incorreto de materiais inflamáveis.
+                  O <strong>Curso de Suporte Básico de Vida (SBV)</strong> tem
+                  como objetivo capacitar profissionais para realizar as
+                  intervenções iniciais em situações de emergência que envolvem
+                  risco de vida iminente, como paradas cardiorrespiratórias,
+                  engasgos e afogamentos. O curso ensina como reconhecer uma
+                  emergência, realizar manobras de ressuscitação e aplicar
+                  técnicas de estabilização até que o socorro especializado
+                  chegue.
                 </p>
 
-                <h3 className="font-bold">Resposta rápida e eficiente:</h3>
+                <h3 className="text-xl font-bold">Objetivos</h3>
                 <p>
-                  Em caso de incêndio, uma brigada bem treinada pode agir
-                  rapidamente para combater as chamas e evitar sua propagação,
-                  utilizando extintores e outros equipamentos de combate a
-                  incêndios.
+                  O principal objetivo do curso de SBV é preparar os
+                  participantes para intervir de maneira segura e eficaz em
+                  emergências, garantindo o suporte vital até a chegada da
+                  equipe médica. Entre os objetivos específicos estão:
+                </p>
+                <ul>
+                  <li>
+                    Reconhecer sinais e sintomas de parada cardiorrespiratória,
+                    obstrução das vias aéreas e outras emergências.
+                  </li>
+                  <li>
+                    Aplicar corretamente as manobras de ressuscitação
+                    cardiopulmonar (RCP).
+                  </li>
+                  <li>
+                    Realizar a desobstrução das vias aéreas em casos de engasgo.
+                  </li>
+                  <li>
+                    Utilizar o desfibrilador externo automático (DEA) quando
+                    indicado.
+                  </li>
+                  <li>
+                    Manter a segurança da cena e seguir protocolos de
+                    biossegurança.
+                  </li>
+                </ul>
+
+                <h3 className="text-xl font-bold">Público-Alvo</h3>
+                <p>
+                  O curso de SBV é destinado a profissionais da área de saúde,
+                  como médicos, enfermeiros e técnicos de enfermagem, além de
+                  socorristas, bombeiros e outros profissionais de segurança
+                  pública.
                 </p>
 
-                <h3 className="font-bold">Evacuação segura:</h3>
+                <h3 className="text-xl font-bold">Importância do Curso</h3>
                 <p>
-                  A brigada é responsável por organizar e conduzir a evacuação
-                  segura de pessoas, garantindo que todos conheçam as rotas de
-                  fuga e os procedimentos de segurança.
-                </p>
-
-                <h3 className="font-bold">Primeiros socorros:</h3>
-                <p>
-                  Além de combater incêndios, os membros da brigada são
-                  treinados em primeiros socorros, podendo prestar assistência
-                  imediata até a chegada dos serviços de emergência.
-                </p>
-
-                <h3 className="font-bold">Cumprimento legal:</h3>
-                <p>
-                  A brigada de incêndio é uma exigência legal para empresas e
-                  condomínios, evitando multas e outras penalidades.
-                </p>
-
-                <h3 className="font-bold">Proteção de vidas e patrimônio:</h3>
-                <p>
-                  O treinamento adequado pode fazer a diferença entre salvar
-                  vidas e sofrer perdas irreparáveis, além de minimizar danos
-                  materiais. Investir no treinamento da brigada de incêndio é,
-                  portanto, um investimento em segurança e bem-estar para todos
-                  os ocupantes de um edifício ou estabelecimento.
+                  Ter conhecimento em Suporte Básico de Vida é fundamental para
+                  qualquer pessoa que queira estar preparada para agir em
+                  situações de emergência. As técnicas aprendidas podem fazer a
+                  diferença entre a vida e a morte de uma vítima, enquanto o
+                  socorro especializado não chega. Em um ambiente onde cada
+                  segundo conta, a intervenção rápida e adequada pode salvar
+                  vidas.
                 </p>
               </div>
               <div className="my-10 border-b-2 border-zinc-200" />
-
               <div className="flex flex-col gap-8">
                 <h2 className="text-xl font-bold">Instrutores</h2>
                 <div className="flex justify-between gap-4">
@@ -192,7 +206,6 @@ export default function BrigadaIncendio() {
                 </div>
               </div>
             </div>
-
             <div className="flex flex-col gap-4">
               <Card className="h-fit shadow-md">
                 <CardHeader>

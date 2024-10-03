@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { leftAnimation } from "../lib/animation";
+import { ArrowRightFromLine } from "lucide-react";
 
 export default function CardCoursesAPH() {
   return (
@@ -13,11 +14,11 @@ export default function CardCoursesAPH() {
     >
       <Image
         src="/image-curso-aph.jpg"
-        alt="imagem curso brigadista"
+        alt="imagem curso aph-b prático"
         width={500}
         height={500}
         quality={100}
-        className="h-auto w-full rounded-xl object-cover shadow-xl"
+        className="h-full w-full rounded-xl object-cover shadow-xl"
       />
       <div className="flex flex-col gap-4">
         <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center">
@@ -30,19 +31,13 @@ export default function CardCoursesAPH() {
               quality={100}
             />
             <span className="text-sm font-medium text-zinc-500">
-              Detalhes do Curso
+              Informações
             </span>
           </div>
-          <Button className="bg-primary transition-all hover:bg-secondary sm:mt-0">
-            <Link href="#aph-b" className="flex items-center gap-2">
-              <span>FAQs</span>
-              <Image
-                src="/icon-info.png"
-                alt="icon brigadas"
-                width={18}
-                height={18}
-                quality={100}
-              />
+          <Button className="bg-primary transition-all hover:bg-secondary hover:text-zinc-950 sm:mt-0">
+            <Link href="/curso/aph-b" className="flex items-center gap-2">
+              <span>Detalhes Curso</span>
+              <ArrowRightFromLine className="h-5 w-5" />
             </Link>
           </Button>
         </div>
