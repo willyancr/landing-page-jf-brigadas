@@ -3,7 +3,7 @@ import Header from "@/app/components/header";
 import Image from "next/image";
 import { Star, Clock, Users, Calendar, BookOpen, Award } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FaEnvelope, FaWhatsapp } from "react-icons/fa6";
+import { FaClock, FaEnvelope, FaMapPin, FaWhatsapp } from "react-icons/fa6";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -240,42 +240,70 @@ export default function BombeiroCivil() {
                 </div>
               </div>
             </div>
-
-            <Card className="h-fit">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold">
-                  Entre em Contato
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4 text-gray-600">
-                  Entre em contato com a gente para mais informações sobre o
-                  curso.
-                </p>
-                <form className="space-y-4">
-                  <Input
-                    placeholder="Nome"
-                    className="outline-none focus:border-secondary"
-                  />
-                  <Input
-                    type="email"
-                    placeholder="Email"
-                    className="outline-none focus:border-secondary"
-                  />
-                  <Textarea
-                    placeholder="Mensagem"
-                    className="resize-none outline-none focus:border-secondary"
-                  />
-                  <Button
-                    type="submit"
-                    className="w-full bg-primary text-white hover:bg-secondary hover:text-primary"
-                  >
-                    Solicitar mais informações
-                    <FaEnvelope className="ml-3 h-4 w-4" />
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            <div className="flex flex-col gap-4">
+              <Card className="h-fit shadow-md">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold">
+                    Entre em Contato
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-4 text-gray-600">
+                    Entre em contato com a gente para mais informações sobre o
+                    curso.
+                  </p>
+                  <form className="space-y-4">
+                    <Input
+                      placeholder="Nome"
+                      className="outline-none focus:border-secondary"
+                    />
+                    <Input
+                      type="email"
+                      placeholder="Email"
+                      className="outline-none focus:border-secondary"
+                    />
+                    <Textarea
+                      placeholder="Mensagem"
+                      className="resize-none outline-none focus:border-secondary"
+                    />
+                    <Button
+                      type="submit"
+                      className="w-full bg-primary text-white hover:bg-secondary hover:text-primary"
+                    >
+                      Solicitar mais informações
+                      <FaEnvelope className="ml-3 h-4 w-4" />
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+              <Card className="h-fit shadow-md">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold">
+                    Informações
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4">
+                    <li className="flex items-center">
+                      <FaEnvelope className="mr-3 h-5 w-5" />
+                      <span>jfbrigada@hotmail.com</span>
+                    </li>
+                    <li className="flex items-center">
+                      <FaWhatsapp className="mr-3 h-5 w-5" />
+                      <span>(63) 99959-5787</span>
+                    </li>
+                    <li className="flex items-center">
+                      <FaMapPin className="mr-3 h-5 w-5" />
+                      <span>Palmas, Tocantins</span>
+                    </li>
+                    <li className="flex items-center">
+                      <FaClock className="mr-3 h-5 w-5" />
+                      <span>08:00h - 18:00h</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </main>
