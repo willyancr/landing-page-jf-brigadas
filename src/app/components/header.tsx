@@ -1,16 +1,16 @@
-'use client'
+"use client";
+
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-// import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
 
-const navItems = [
-  { id: 1, title: "Sobre o Curso", href: "#about" },
-  { id: 2, title: "Instrutores", href: "#instructors" },
-  { id: 3, title: "Contato", href: "#contact" },
-  { id: 4, title: "FAQs", href: "#faqs" },
-  { id: 5, title: "Empresa", href: "#enterprise" },
+const navItemsHome = [
+  { id: 1, title: "Sobre o Curso", href: "/#about" },
+  { id: 2, title: "Instrutores", href: "/#instructors" },
+  { id: 3, title: "Contato", href: "/#contact" },
+  { id: 4, title: "FAQs", href: "/#faqs" },
+  { id: 5, title: "Empresa", href: "/#enterprise" },
 ];
 
 export default function Header() {
@@ -19,15 +19,17 @@ export default function Header() {
   return (
     <header className="w-full bg-primary text-secondary">
       <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-4 py-4 md:px-12">
-        <Image
-          src="/logo-2.png"
-          alt="JF Brigadas"
-          width={100}
-          height={100}
-          quality={100}
-          className="md:w-[100px] md:h-[80px]"
-        />
-        
+        <Link href="/">
+          <Image
+            src="/logo-2.png"
+            alt="JF Brigadas"
+            width={100}
+            height={100}
+            quality={100}
+            className="md:h-[80px] md:w-[100px]"
+          />
+        </Link>
+
         {/* Menu hambúrguer para telas menores */}
         <button
           className="md:hidden"
@@ -37,9 +39,9 @@ export default function Header() {
         </button>
 
         {/* Menu de navegação */}
-        <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:block`}>
-          <ul className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-            {navItems.map((item) => (
+        <nav className={`${isMenuOpen ? "block" : "hidden"} md:block`}>
+          <ul className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
+            {navItemsHome.map((item) => (
               <li key={item.id}>
                 <Link
                   href={item.href}
@@ -49,11 +51,6 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-            {/* <li>
-              <Button className="bg-secondary font-bold uppercase text-primary shadow-lg hover:text-zinc-50 w-full md:w-auto">
-                Inscreva-se
-              </Button>
-            </li> */}
           </ul>
         </nav>
       </div>

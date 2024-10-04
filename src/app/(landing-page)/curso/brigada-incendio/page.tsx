@@ -16,16 +16,16 @@ export default function BrigadaIncendio() {
       <main className="mb-24 min-h-screen">
         <div className="relative bg-zinc-100 pb-20">
           <div className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
-            <div className="flex gap-12">
+            <div className="flex flex-col gap-8 md:flex-row md:gap-12">
               <Image
                 src="/image-curso-brigadista.jpg"
                 alt="imagem curso brigadista"
                 width={500}
                 height={500}
                 quality={100}
-                className="h-60 w-60 rounded-xl object-cover shadow-xl"
+                className="h-60 w-full rounded-xl object-cover shadow-xl md:w-60"
               />
-              <div className="flex w-[500px] flex-col gap-4">
+              <div className="flex w-full flex-col gap-4 md:w-[500px]">
                 <h1 className="text-2xl font-bold">
                   Curso: Treinamento de Brigada de Incêndio
                 </h1>
@@ -71,8 +71,8 @@ export default function BrigadaIncendio() {
                   </div>
                 </div>
               </div>
-              <div className="ml-auto">
-                <Button className="bg-primary text-white hover:bg-secondary hover:text-primary">
+              <div className="mt-4 md:ml-auto md:mt-0">
+                <Button className="w-full bg-primary text-white hover:bg-secondary hover:text-primary md:w-auto">
                   <a
                     href="https://wa.me/5563999595787"
                     target="_blank"
@@ -88,7 +88,7 @@ export default function BrigadaIncendio() {
           </div>
         </div>
         <div className="container mx-auto max-w-[1200px] px-4 pb-10 sm:px-6 lg:px-12">
-          <div className="relative -mt-20 grid grid-cols-[70%_30%] gap-10">
+          <div className="relative -mt-20 grid grid-cols-1 gap-10 lg:grid-cols-[70%_30%]">
             <div className="rounded-lg bg-white p-6 pb-20 shadow-md">
               <h2 className="mb-4 text-2xl font-bold">Sobre o curso</h2>
 
@@ -140,7 +140,7 @@ export default function BrigadaIncendio() {
 
               <div className="flex flex-col gap-8">
                 <h2 className="text-xl font-bold">Instrutores</h2>
-                <div className="flex justify-between gap-4">
+                <div className="flex flex-col justify-between gap-8 sm:flex-row sm:gap-4">
                   <div className="flex flex-col items-center gap-2">
                     <Image
                       src="/image-profile-bombeiro-1.jpeg"

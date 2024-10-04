@@ -5,9 +5,9 @@ import {
   FaYoutube,
   FaXTwitter,
 } from "react-icons/fa6";
+import SocialMediaLink from "./social-midia-link";
 import Image from "next/image";
 import Link from "next/link";
-import SocialMediaLink from "./social-midia-link";
 
 export default function Footer() {
   return (
@@ -38,11 +38,11 @@ export default function Footer() {
               <span className="font-medium text-secondary">Footer Menu</span>
               <div className="flex flex-col gap-2">
                 {[
-                  { id: 1, title: "Sobre o curso", href: "#about" },
-                  { id: 2, title: "Instrutores", href: "#instructors" },
-                  { id: 3, title: "Contato", href: "#contact" },
-                  { id: 4, title: "FAQs", href: "#faqs" },
-                  { id: 5, title: "Empresa", href: "#enterprise" },
+                  { id: 1, title: "Sobre o curso", href: "/#about" },
+                  { id: 2, title: "Instrutores", href: "/#instructors" },
+                  { id: 3, title: "Contato", href: "/#contact" },
+                  { id: 4, title: "FAQs", href: "/#faqs" },
+                  { id: 5, title: "Empresa", href: "/#enterprise" },
                 ].map((item) => (
                   <Link
                     key={item.id}
