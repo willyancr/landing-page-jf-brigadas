@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JF Brigadas - Landing Page
 
-## Getting Started
+Esta é a landing page da **JF Brigadas**, uma empresa que oferece cursos de Brigada de Incêndio, Bombeiro Civil, e Suporte Básico de Vida (SBV). A landing page apresenta informações sobre os cursos, instrutores e um formulário de contato.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js 14**: Framework React para a criação de páginas dinâmicas e estáticas.
+- **Tailwind CSS**: Framework CSS para o design responsivo e moderno.
+- **React Icons**: Biblioteca de ícones para usar em diversos componentes.
+- **Vercel**: Plataforma utilizada para o deploy da aplicação.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estrutura do Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Seções da Página
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Hero Section**: Apresentação com frases rotativas destacando a importância dos cursos.
+- **Sobre**: Descrição da empresa, seus valores e propósitos.
+- **Cursos Oferecidos**: Cards com breve descrição de cada curso e link para a página de detalhes.
+- **Instrutores**: Seção com perfil dos instrutores, destacando suas credenciais.
+- **Galeria de Fotos**: Imagens de cursos anteriores e atividades práticas.
+- **Contato**: Formulário para envio de mensagens e informações de contato.
 
-## Learn More
+### Detalhes dos Cursos
 
-To learn more about Next.js, take a look at the following resources:
+A página oferece informações detalhadas sobre cada curso, incluindo uma checklist com os principais tópicos abordados. São 4 cursos principais:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Brigada de Incêndio**
+2. **Bombeiro Civil**
+3. **Suporte Básico de Vida (SBV)**
+4. **APH-B Prático**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Cada curso tem sua própria página de detalhes com informações completas.
 
-## Deploy on Vercel
+## Funcionalidades
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Frases Rotativas**: Na seção "Hero", três frases sobre os cursos são exibidas de forma alternada a cada 3 segundos.
+- **Cards de Cursos**: Resumos rápidos dos cursos oferecidos com um botão para ver mais detalhes.
+- **Formulário de Contato**: Permite que os visitantes entrem em contato diretamente pela landing page.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
