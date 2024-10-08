@@ -1,13 +1,12 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Award, BookOpen, Calendar, Clock, Star, Users } from "lucide-react";
+import { FaClock, FaEnvelope, FaMapPin, FaWhatsapp } from "react-icons/fa6";
+import CardSendEmail from "@/app/components/card-send-email";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import Footer from "@/app/components/footer";
 import Header from "@/app/components/header";
 import Image from "next/image";
-import { Star, Clock, Users, Calendar, BookOpen, Award } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FaClock, FaEnvelope, FaMapPin, FaWhatsapp } from "react-icons/fa6";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
 
 export default function SuporteBasicoVida() {
   return (
@@ -207,41 +206,7 @@ export default function SuporteBasicoVida() {
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <Card className="h-fit shadow-md">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold">
-                    Entre em Contato
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4 text-gray-600">
-                    Entre em contato com a gente para mais informações sobre o
-                    curso.
-                  </p>
-                  <form className="space-y-4">
-                    <Input
-                      placeholder="Nome"
-                      className="outline-none focus:border-secondary"
-                    />
-                    <Input
-                      type="email"
-                      placeholder="Email"
-                      className="outline-none focus:border-secondary"
-                    />
-                    <Textarea
-                      placeholder="Mensagem"
-                      className="resize-none outline-none focus:border-secondary"
-                    />
-                    <Button
-                      type="submit"
-                      className="w-full bg-primary text-white hover:bg-secondary hover:text-primary"
-                    >
-                      Solicitar mais informações
-                      <FaEnvelope className="ml-3 h-4 w-4" />
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+              <CardSendEmail />
               <Card className="h-fit shadow-md">
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold">

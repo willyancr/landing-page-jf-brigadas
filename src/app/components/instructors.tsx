@@ -26,7 +26,7 @@ export default function Instructors() {
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <motion.div
-            className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
+            className="flex flex-col gap-4 justify-between rounded-md bg-primary/10 p-4 shadow-lg"
             {...scaleAnimation}
             transition={{ duration: 0.5 }}
           >
@@ -38,12 +38,13 @@ export default function Instructors() {
               quality={100}
               className="w-full rounded-md"
             />
-            <h2 className="text-2xl font-bold">Instrutor 1</h2>
+            <h2 className="text-2xl font-bold">João Paulo de Sousa</h2>
 
             <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptatem, quae beatae, aperiam, voluptas unde possimus quidem
-              explicabo quos?
+              Sargento Bombeiro Militar e Bombeiro Profissional Civil. Instrutor
+              experiente em combate a incêndios e atendimento de emergências,
+              com ampla atuação em salvamento e prevenção. Capacitado para
+              formar profissionais com excelência e segurança.
             </p>
             <div className="flex items-center gap-4">
               <SocialMediaLink href="https://www.instagram.com">

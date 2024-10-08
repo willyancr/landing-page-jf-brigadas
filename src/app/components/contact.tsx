@@ -1,11 +1,10 @@
 "use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { FaClock, FaEnvelope, FaMapPin, FaWhatsapp } from "react-icons/fa6";
+import CardSendEmail from "./card-send-email";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Contact() {
   const [isClient, setIsClient] = useState(false);
@@ -19,7 +18,10 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact" className="container mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-12 py-8 sm:py-12 lg:py-16">
+    <div
+      id="contact"
+      className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16"
+    >
       <div className="mb-16 flex items-center gap-2 border-l-2 border-secondary pl-2">
         <Image
           src="/icon-contato.png"
@@ -33,7 +35,7 @@ export default function Contact() {
         </h1>
       </div>
       <div className="grid gap-8 md:grid-cols-2">
-        <Card className="bg-image-card-info text-white">
+        <Card className="bg-image-card-info text-white shadow-md">
           <CardHeader>
             <CardTitle className="mb-4 flex flex-col items-center text-2xl font-semibold">
               <Image
@@ -73,41 +75,7 @@ export default function Contact() {
             </ul>
           </CardContent>
         </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold">
-              Entre em Contato
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="mb-4 text-gray-600">
-              Sinta-se à vontade para nos contatar a qualquer momento.
-              Responderemos o mais breve possível!
-            </p>
-            <form className="space-y-4">
-              <Input
-                placeholder="Nome"
-                className="outline-none focus:border-secondary"
-              />
-              <Input
-                type="email"
-                placeholder="Email"
-                className="outline-none focus:border-secondary"
-              />
-              <Textarea
-                placeholder="Mensagem"
-                className="resize-none outline-none focus:border-secondary"
-              />
-              <Button
-                type="submit"
-                className="w-full bg-primary text-white hover:bg-secondary hover:text-primary"
-              >
-                Solicitar mais informações
-                <FaEnvelope className="ml-3 h-4 w-4" />
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
+        <CardSendEmail />
       </div>
     </div>
   );

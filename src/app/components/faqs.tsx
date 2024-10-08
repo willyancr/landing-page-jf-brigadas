@@ -98,7 +98,7 @@ export default function Faqs() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                  <AccordionTrigger className="text-base md:text-lg lg:text-xl text-start">
+                  <AccordionTrigger className="text-start text-base md:text-lg lg:text-xl">
                     O curso de bombeiro civil é reconhecido por algum órgão?
                   </AccordionTrigger>
                   <AccordionContent>
@@ -192,6 +192,68 @@ export default function Faqs() {
                     Sim, ao final do curso, os alunos recebem um certificado de
                     conclusão que atesta a capacidade de prestar primeiros
                     socorros.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+          <div id="aph-b" className="space-y-4">
+            <h1 className="text-3xl font-semibold text-secondary">
+              Curso de Suporte Básico de Vida (SBV)
+            </h1>
+            <div>
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                    O que é o curso de Suporte Básico de Vida (SBV)?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    O curso de Suporte Básico de Vida (SBV) ensina técnicas
+                    essenciais de primeiros socorros, incluindo RCP, uso de
+                    desfibriladores e como agir em situações de emergência
+                    médica.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                    O curso oferece certificação?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Sim, ao concluir o curso, você receberá um certificado de
+                    participação, que atesta sua capacidade de prestar suporte
+                    básico de vida.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                    Quais são os principais tópicos abordados no curso?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    O curso aborda ressuscitação cardiopulmonar (RCP), uso de
+                    desfibriladores automáticos (DEA), técnicas de controle de
+                    hemorragias, manobras para desobstrução de vias aéreas e
+                    muito mais.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                    O curso de SBV inclui prática com equipamentos?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Sim, durante o curso, você terá a oportunidade de praticar
+                    com equipamentos como manequins para RCP e desfibriladores
+                    automáticos (DEA).
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5">
+                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                    Como o curso de SBV pode me beneficiar profissionalmente?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Ter conhecimento de suporte básico de vida é um diferencial
+                    em muitas áreas, especialmente em saúde, segurança e
+                    eventos, além de ser uma habilidade essencial para o dia a
+                    dia.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
