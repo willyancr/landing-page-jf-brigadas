@@ -183,7 +183,7 @@ export default function Instructors() {
               </ul>
             </div>
             <div className="flex items-center gap-4">
-              <SocialMediaLink href="https://www.instagram.com">
+              <SocialMediaLink href="https://www.instagram.com/thalytadinizz/">
                 <FaInstagram size={24} />
               </SocialMediaLink>
               <SocialMediaLink href="https://www.facebook.com">
@@ -231,7 +231,7 @@ export default function Instructors() {
               </ul>
             </div>
             <div className="flex items-center gap-4">
-              <SocialMediaLink href="https://www.instagram.com">
+              <SocialMediaLink href="https://www.instagram.com/erikasilper">
                 <FaInstagram size={24} />
               </SocialMediaLink>
               <SocialMediaLink href="https://www.facebook.com">
@@ -339,7 +339,7 @@ export default function Instructors() {
               </ul>
             </div>
             <div className="flex items-center gap-4">
-              <SocialMediaLink href="https://www.instagram.com">
+              <SocialMediaLink href="https://www.instagram.com/sararayssa.prof">
                 <FaInstagram size={24} />
               </SocialMediaLink>
               <SocialMediaLink href="https://www.facebook.com">
