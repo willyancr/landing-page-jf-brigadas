@@ -15,12 +15,12 @@ interface ImageItem {
 const images: ImageItem[] = [
   {
     id: "1",
-    src: "/image-curso-brigadista.jpg",
+    src: "/galeria-curso-1.jpg",
     alt: "Descrição da imagem 1",
   },
   {
     id: "2",
-    src: "/image-curso-brigadista.jpg",
+    src: "/galeria-curso-2.jpg",
     alt: "Descrição da imagem 2",
   },
   {
@@ -98,7 +98,7 @@ export function GalleryImages() {
               alt={selectedImage.alt}
               width={800}
               height={600}
-              className="h-full w-full animate-modal rounded-lg object-contain"
+              className="h-[600px] w-full animate-modal rounded-lg object-contain"
             />
           )}
         </DialogContent>

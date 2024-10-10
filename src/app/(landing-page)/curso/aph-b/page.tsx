@@ -31,10 +31,10 @@ export default function APHB() {
 
                 <div className="flex gap-2">
                   <Badge variant="outline" className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" /> 30h
+                    <Clock className="h-3 w-3" /> 50h
                   </Badge>
                   <Badge variant="outline" className="flex items-center gap-1">
-                    <Users className="h-3 w-3" /> Profissional
+                    <Users className="h-3 w-3" /> Profissional da Saúde
                   </Badge>
                   <Badge variant="outline" className="flex items-center gap-1">
                     <Calendar className="h-3 w-3" /> Presencial

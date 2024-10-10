@@ -31,7 +31,7 @@ export default function BrigadaIncendio() {
 
                 <div className="flex gap-2">
                   <Badge variant="outline" className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" /> 40h
+                    <Clock className="h-3 w-3" /> 16h
                   </Badge>
                   <Badge variant="outline" className="flex items-center gap-1">
                     <Users className="h-3 w-3" /> Iniciante

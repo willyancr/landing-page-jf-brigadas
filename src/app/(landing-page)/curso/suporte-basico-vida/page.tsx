@@ -17,7 +17,7 @@ export default function SuporteBasicoVida() {
           <div className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
             <div className="flex flex-col gap-8 md:flex-row md:gap-12">
               <Image
-                src="/image-curso-sbv.jpg"
+                src="/image-curso-sbv-2.jpg"
                 alt="imagem curso sbv"
                 width={500}
                 height={500}
@@ -31,10 +31,10 @@ export default function SuporteBasicoVida() {
 
                 <div className="flex gap-2">
                   <Badge variant="outline" className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" /> 30h
+                    <Clock className="h-3 w-3" /> 08h
                   </Badge>
                   <Badge variant="outline" className="flex items-center gap-1">
-                    <Users className="h-3 w-3" /> Profissional
+                    <Users className="h-3 w-3" /> Profissional da saúde
                   </Badge>
                   <Badge variant="outline" className="flex items-center gap-1">
                     <Calendar className="h-3 w-3" /> Presencial

@@ -38,7 +38,9 @@ export default function CardCoursesBombeiroCivil() {
         </div>
 
         <div className="mb-4 space-y-2">
-          <h1 className="text-3xl font-bold lg:text-4xl">Bombeiro Civil</h1>
+          <h1 className="text-3xl font-bold lg:text-4xl">
+            Bombeiro Profissional Civil
+          </h1>
           <p className="text-base text-zinc-500 lg:text-lg">
             Capacite-se em combate a incêndio, salvamentos e primeiros socorros,
             tornando-se um bombeiro civil preparado para agir em emergências e
