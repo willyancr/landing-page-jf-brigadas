@@ -199,6 +199,7 @@ export default function Instructors() {
             {...leftAnimation}
             transition={{ duration: 0.3, delay: 0.2 }}
             className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
+            id="instructor-line-2"
           >
             <Image
               src="/image-profile-bombeiro-2.jpeg"
@@ -246,6 +247,7 @@ export default function Instructors() {
             {...leftAnimation}
             transition={{ duration: 0.3, delay: 0.3 }}
             className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
+            id="instructor-line-2"
           >
             <Image
               src="/image-profile-bombeiro-1.jpeg"
@@ -301,6 +303,7 @@ export default function Instructors() {
             {...leftAnimation}
             transition={{ duration: 0.3, delay: 0.4 }}
             className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
+            id="instructor-line-2"
           >
             <Image
               src="/image-profile-bombeiro-3.jpeg"
@@ -352,6 +355,7 @@ export default function Instructors() {
             {...leftAnimation}
             transition={{ duration: 0.3, delay: 0.2 }}
             className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
+            id="instructor-line-3"
           >
             <Image
               src="/image-profile-bombeiro-1.jpeg"
