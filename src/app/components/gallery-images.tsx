@@ -1,10 +1,8 @@
 "use client";
 
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { scaleAnimation } from "../lib/animation";
 
 interface ImageItem {
   id: string;
@@ -70,10 +68,8 @@ export function GalleryImages() {
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {images.map((image) => (
-            <motion.div
+            <div
               key={image.id}
-              {...scaleAnimation}
-              transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
               onClick={() => openImage(image)}
               className="cursor-pointer overflow-hidden rounded-lg shadow-lg"
             >
@@ -85,7 +81,7 @@ export function GalleryImages() {
                 className="h-48 w-full object-cover"
                 loading="lazy"
               />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

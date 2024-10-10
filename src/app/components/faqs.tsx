@@ -259,6 +259,66 @@ export default function Faqs() {
               </Accordion>
             </div>
           </div>
+          <div id="aph-b" className="space-y-4">
+            <h1 className="text-3xl font-semibold text-secondary">
+              Trauma no Atendimento Pré-Hospitalar (APH-B)
+            </h1>
+            <div>
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                    Quem pode fazer o curso de Trauma no Atendimento
+                    Pré-Hospitalar (APH-B)?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    O curso é indicado para profissionais da área de saúde,
+                    bombeiros, socorristas e qualquer pessoa interessada em
+                    aprender técnicas de atendimento em situações de trauma.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                    Qual é a duração do curso?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    O curso tem uma carga horária total de 08 horas, divididas
+                    entre conteúdo teórico e prático.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                    O curso oferece certificado?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Sim, todos os participantes que concluírem o curso receberão
+                    um certificado de conclusão, válido em todo o território
+                    nacional.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                    As aulas são teóricas ou práticas?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    O curso oferece uma combinação de aulas teóricas e práticas,
+                    permitindo que os alunos apliquem o que aprenderam em
+                    simulações de cenários reais de emergência.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5">
+                  <AccordionTrigger className="text-base md:text-lg lg:text-xl">
+                    Quais habilidades eu vou adquirir no curso?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Você aprenderá técnicas de avaliação de cena, imobilização
+                    de vítimas, atendimento em traumas graves e primeiros
+                    socorros, capacitando-se para atuar em emergências de forma
+                    segura e eficaz.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
         </div>
       </div>
     </div>

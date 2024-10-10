@@ -3,6 +3,7 @@ import CardCoursesDetails from "./card-courses-details";
 import CardCoursesBombeiroCivil from "./card-courses-bombeiro-civil";
 import CardCoursesAPH from "./card-courses-aph";
 import CardCoursesSBV from "./card-courses-sbv";
+import CardCoursesTrauma from "./card-courses-trauma";
 
 export default function About() {
   return (
@@ -29,6 +30,7 @@ export default function About() {
           <CardCoursesBombeiroCivil />
           <CardCoursesAPH />
           <CardCoursesSBV />
+          <CardCoursesTrauma />
         </div>
       </div>
     </div>
