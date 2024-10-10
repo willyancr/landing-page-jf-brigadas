@@ -101,7 +101,7 @@ export default function CardCoursesSBV() {
       </div>
 
       <Image
-        src="/image-curso-sbv-3.jpg"
+        src="/image-curso-sbv-2.jpg"
         alt="imagem curso Suporte Básico de Vida "
         width={500}
         height={500}
