@@ -1,9 +1,16 @@
 "use client";
-import Image from "next/image";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
+
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa6";
 import SocialMediaLink from "./social-midia-link";
-import { motion } from "framer-motion";
 import { leftAnimation } from "../lib/animation";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Instructors() {
   return (
@@ -24,6 +31,8 @@ export default function Instructors() {
             Instrutores
           </h1>
         </div>
+
+        {/* Dados dos instrutores */}
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <motion.div
             {...leftAnimation}
@@ -62,13 +71,13 @@ export default function Instructors() {
               </ul>
             </div>
             <div className="flex items-center gap-4">
-              <SocialMediaLink href="https://www.instagram.com">
+              <SocialMediaLink href="https://www.instagram.com/ismael.armondes/">
                 <FaInstagram size={24} />
               </SocialMediaLink>
-              <SocialMediaLink href="https://www.facebook.com">
+              <SocialMediaLink href="https://www.facebook.com/ismael.armondes">
                 <FaFacebook size={24} />
               </SocialMediaLink>
-              <SocialMediaLink href="https://www.linkedin.com">
+              <SocialMediaLink href="https://www.linkedin.com/in/dr-ismael-armondes-524475304/">
                 <FaLinkedin size={24} />
               </SocialMediaLink>
             </div>
@@ -124,14 +133,14 @@ export default function Instructors() {
               </ul>
             </div>
             <div className="flex items-center gap-4">
-              <SocialMediaLink href="https://www.instagram.com">
+              <SocialMediaLink href="https://www.instagram.com/jfbrigadas/">
                 <FaInstagram size={24} />
               </SocialMediaLink>
-              <SocialMediaLink href="https://www.facebook.com">
-                <FaFacebook size={24} />
+              <SocialMediaLink href="https://api.whatsapp.com/send?phone=5563999595787">
+                <FaWhatsapp size={24} />
               </SocialMediaLink>
-              <SocialMediaLink href="https://www.linkedin.com">
-                <FaLinkedin size={24} />
+              <SocialMediaLink href="https://www.youtube.com/jfbrigadas">
+                <FaYoutube size={24} />
               </SocialMediaLink>
             </div>
           </motion.div>

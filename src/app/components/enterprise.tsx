@@ -20,8 +20,8 @@ export default function Enterprise() {
           Nossa Empresa
         </h1>
       </div>
-      <div className="grid grid-cols-1 gap-6 rounded-lg bg-image-card-info p-4 text-zinc-50 shadow-lg sm:p-6 md:grid-cols-2">
-        <div className="flex items-center justify-center border-secondary/50 md:border-r">
+      <div className="grid grid-cols-1 gap-6 rounded-lg bg-image-card-info bg-cover p-4 text-zinc-50 shadow-lg sm:p-6 md:grid-cols-2">
+        <div className="flex flex-col items-center justify-between border-secondary/50 md:border-r">
           <Image
             src="/logo-2.png"
             alt="icon contato"
@@ -30,8 +30,23 @@ export default function Enterprise() {
             quality={100}
             className="mb-4 h-auto max-w-full"
           />
+          <div className="flex w-[400px] flex-col gap-2 p-4 text-gray-300">
+            <p className="rounded-md bg-secondary/30 p-2 text-sm">
+              <strong>MISSÃO:</strong> Formar profissionais técnicos e
+              capacitados para atividade de bombeiro profissional civil.
+            </p>
+            <p className="rounded-md bg-secondary/30 p-2 text-sm">
+              <strong>VISÃO:</strong> Ser uma empresa reconhecida pela
+              qualidade, bem como uma empresa transformadora da realidade social
+              e humana.
+            </p>
+            <p className="rounded-md bg-secondary/30 p-2 text-sm">
+              <strong>VALORES:</strong> Ética, humanismo, responsbilidade
+              social, integridade e inovação.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col justify-between gap-4">
           <h2 className="text-center text-2xl font-semibold sm:text-3xl">
             JF Brigadas
           </h2>
