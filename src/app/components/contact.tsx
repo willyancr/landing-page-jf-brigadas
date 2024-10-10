@@ -75,6 +75,7 @@ export default function Contact() {
             </ul>
           </CardContent>
         </Card>
+
         <CardSendEmail />
       </div>
     </div>
