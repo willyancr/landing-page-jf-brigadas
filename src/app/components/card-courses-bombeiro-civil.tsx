@@ -1,10 +1,9 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { upAnimation } from "../lib/animation";
-import { ArrowRightFromLine } from "lucide-react";
+import ButtonInfo from "./button-info";
 
 export default function CardCoursesBombeiroCivil() {
   return (
@@ -26,17 +25,11 @@ export default function CardCoursesBombeiroCivil() {
               Informações
             </span>
           </div>
-          <Button className="bg-primary transition-all hover:bg-secondary hover:text-zinc-950 sm:mt-0">
-            <Link
-              href="/curso/bombeiro-civil"
-              className="flex items-center gap-2"
-            >
-              <span>Detalhes Curso</span>
-              <ArrowRightFromLine className="h-5 w-5" />
-            </Link>
-          </Button>
+          <Link href="/curso/bombeiro-civil">
+            <ButtonInfo />
+          </Link>
         </div>
-
+        
         <div className="mb-4 space-y-2">
           <h1 className="text-3xl font-bold lg:text-4xl">
             Bombeiro Profissional Civil

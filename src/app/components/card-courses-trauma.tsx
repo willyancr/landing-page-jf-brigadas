@@ -1,10 +1,9 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { leftAnimation } from "../lib/animation";
+import { motion } from "framer-motion";
+import ButtonInfo from "./button-info";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { leftAnimation } from "../lib/animation";
-import { ArrowRightFromLine } from "lucide-react";
 
 export default function CardCoursesTrauma() {
   return (
@@ -34,15 +33,9 @@ export default function CardCoursesTrauma() {
               Informações
             </span>
           </div>
-          <Button className="bg-primary transition-all hover:bg-secondary hover:text-zinc-950 sm:mt-0">
-            <Link
-              href="/curso/trauma-no-atendimento-pre-hospitalar"
-              className="flex items-center gap-2"
-            >
-              <span>Detalhes Curso</span>
-              <ArrowRightFromLine className="h-5 w-5" />
-            </Link>
-          </Button>
+          <Link href="/curso/trauma-no-atendimento-pre-hospitalar">
+            <ButtonInfo />
+          </Link>
         </div>
 
         <div className="mb-4 space-y-2">
