@@ -2,18 +2,18 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { leftAnimation } from "../lib/animation";
-import ButtonInfo from "./button-info";
+import { leftAnimation } from "../../lib/animation";
+import ButtonInfo from "../button-info";
 
-export default function CardCoursesAPH() {
+export default function CardCoursesDetails() {
   return (
     <motion.div
       className="flex w-full flex-col gap-6 rounded-lg bg-zinc-100 p-4 shadow-lg lg:grid lg:grid-cols-2 lg:gap-12 lg:p-10"
       {...leftAnimation}
     >
       <Image
-        src="/image-curso-aph.jpg"
-        alt="imagem curso aph-b prático"
+        src="/image-curso-brigadista.jpg"
+        alt="imagem curso brigadista"
         width={500}
         height={500}
         quality={100}
@@ -23,8 +23,8 @@ export default function CardCoursesAPH() {
         <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center">
           <div className="flex items-center gap-2">
             <Image
-              src="/icon-cruz-vermelha.png"
-              alt="icon cruz vermelha"
+              src="/icon-brigadas.png"
+              alt="icon brigadas"
               width={24}
               height={24}
               quality={100}
@@ -33,16 +33,19 @@ export default function CardCoursesAPH() {
               Informações
             </span>
           </div>
-          <Link href="/curso/aph-b">
+          <Link href="/curso/brigada-incendio">
             <ButtonInfo />
           </Link>
         </div>
 
         <div className="mb-4 space-y-2">
-          <h1 className="text-3xl font-bold lg:text-4xl">APH-B Prático</h1>
+          <h1 className="text-3xl font-bold lg:text-4xl">
+            Brigadas de Incêndios
+          </h1>
           <p className="text-base text-zinc-500 lg:text-lg">
-            Capacite-se em primeiros socorros, aprendendo técnicas de APH para
-            atuar com eficiência em situações de emergência e salvar vidas.
+            Aprenda técnicas avançadas de combate a incêndio e primeiros
+            socorros, tornando-se um profissional capacitado para atuar em
+            situações de risco e salvar vidas.
           </p>
         </div>
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
@@ -76,14 +79,14 @@ export default function CardCoursesAPH() {
         <div className="my-4 border-b-2 border-secondary/10" />
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {[
-            { id: 1, title: "Suporte Básico de Vida (SBV)" },
-            { id: 2, title: "Controle de Hemorragias" },
-            { id: 3, title: "Imobilização de Fraturas" },
-            { id: 4, title: "Atendimento a Vítimas de Traumas" },
-            { id: 5, title: "Cuidados com Queimaduras" },
-            { id: 6, title: "Imobilização e Transporte de Vítimas" },
-            { id: 7, title: "Desobstrução de Vias Aéreas" },
-            { id: 8, title: "Simulações Práticas de Emergências" },
+            { id: 1, title: "Prevenção de Incêndios" },
+            { id: 2, title: "Evacuação de Emergência" },
+            { id: 3, title: "Primeiros Socorros" },
+            { id: 4, title: "Controle de Pânico" },
+            { id: 5, title: "Combate a Incêndios com Extintores" },
+            { id: 6, title: "Simulações Práticas de Incêndio" },
+            { id: 7, title: "Responsabilidades do Brigadista" },
+            { id: 8, title: "Plano de Ação de Emergência" },
           ].map((item) => (
             <div key={item.id} className="flex items-center gap-1">
               <Image

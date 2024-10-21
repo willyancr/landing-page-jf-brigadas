@@ -1,18 +1,18 @@
 "use client";
-import { leftAnimation } from "../lib/animation";
 import { motion } from "framer-motion";
-import ButtonInfo from "./button-info";
 import Image from "next/image";
 import Link from "next/link";
+import { leftAnimation } from "../../lib/animation";
+import ButtonInfo from "../button-info";
 
-export default function CardCoursesTrauma() {
+export default function CardCoursesAPH() {
   return (
     <motion.div
       className="flex w-full flex-col gap-6 rounded-lg bg-zinc-100 p-4 shadow-lg lg:grid lg:grid-cols-2 lg:gap-12 lg:p-10"
       {...leftAnimation}
     >
       <Image
-        src="/image-curso-trauma.jpg"
+        src="/image-curso-aph.jpg"
         alt="imagem curso aph-b prático"
         width={500}
         height={500}
@@ -33,20 +33,16 @@ export default function CardCoursesTrauma() {
               Informações
             </span>
           </div>
-          <Link href="/curso/trauma-no-atendimento-pre-hospitalar">
+          <Link href="/curso/aph-b">
             <ButtonInfo />
           </Link>
         </div>
 
         <div className="mb-4 space-y-2">
-          <h1 className="text-3xl font-bold lg:text-4xl">
-            Trauma no Atendimento Pré-Hospitalar (APH-B)
-          </h1>
+          <h1 className="text-3xl font-bold lg:text-4xl">APH-B Prático</h1>
           <p className="text-base text-zinc-500 lg:text-lg">
-            Capacite-se para atuar em situações de trauma no ambiente
-            pré-hospitalar, aprendendo técnicas essenciais de imobilização,
-            resgate e suporte vital, garantindo uma resposta rápida e eficaz em
-            emergências.
+            Capacite-se em primeiros socorros, aprendendo técnicas de APH para
+            atuar com eficiência em situações de emergência e salvar vidas.
           </p>
         </div>
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
@@ -80,39 +76,14 @@ export default function CardCoursesTrauma() {
         <div className="my-4 border-b-2 border-secondary/10" />
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {[
-            {
-              id: 1,
-              title: "Técnicas de avaliação primária e secundária de traumas",
-            },
-            { id: 2, title: "Imobilização e transporte seguro de vítimas" },
-            {
-              id: 3,
-              title:
-                "Atendimento inicial a traumas cranioencefálicos e espinhais",
-            },
-            {
-              id: 4,
-              title: "Manejo de hemorragias externas e choque hipovolêmico",
-            },
-            {
-              id: 5,
-              title:
-                "Atendimento de fraturas, luxações e lesões musculoesqueléticas",
-            },
-            {
-              id: 6,
-              title:
-                "Procedimentos de emergência para traumas torácicos e abdominais",
-            },
-            {
-              id: 7,
-              title:
-                "Técnicas de extração de vítimas em ambientes de difícil acesso",
-            },
-            {
-              id: 8,
-              title: "Prática de suporte ventilatório e manejo de vias aéreas",
-            },
+            { id: 1, title: "Suporte Básico de Vida (SBV)" },
+            { id: 2, title: "Controle de Hemorragias" },
+            { id: 3, title: "Imobilização de Fraturas" },
+            { id: 4, title: "Atendimento a Vítimas de Traumas" },
+            { id: 5, title: "Cuidados com Queimaduras" },
+            { id: 6, title: "Imobilização e Transporte de Vítimas" },
+            { id: 7, title: "Desobstrução de Vias Aéreas" },
+            { id: 8, title: "Simulações Práticas de Emergências" },
           ].map((item) => (
             <div key={item.id} className="flex items-center gap-1">
               <Image

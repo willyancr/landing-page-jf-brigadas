@@ -89,7 +89,7 @@ export default function Instructors() {
             transition={{ duration: 0.3, delay: 0.3 }}
           >
             <Image
-              src="/image-profile-bombeiro-1.jpeg"
+              src="https://res.cloudinary.com/drvploup8/image/upload/v1729533193/JO%C3%83O-PAULO_zsdy48.jpg"
               alt="imagem do instrutor"
               width={400}
               height={400}
@@ -151,7 +151,7 @@ export default function Instructors() {
             className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
           >
             <Image
-              src="/image-profile-bombeiro-2.jpeg"
+              src="https://res.cloudinary.com/drvploup8/image/upload/v1729536300/Thalyta_Diniz_Trindade_d6jcxg.jpg"
               alt="imagem do instrutor"
               width={400}
               height={400}
@@ -202,7 +202,7 @@ export default function Instructors() {
             id="instructor-line-2"
           >
             <Image
-              src="/image-profile-bombeiro-2.jpeg"
+              src="https://res.cloudinary.com/drvploup8/image/upload/v1729536300/Erika_Silva_Pereira_Ara%C3%BAjo_amynyb.jpg"
               alt="imagem do instrutor"
               width={400}
               height={400}
@@ -250,7 +250,7 @@ export default function Instructors() {
             id="instructor-line-2"
           >
             <Image
-              src="/image-profile-bombeiro-1.jpeg"
+              src="https://res.cloudinary.com/drvploup8/image/upload/v1729536300/Luiz_Henrique_Barbosa_Fernandes_s0qqb8.jpg"
               alt="imagem do instrutor"
               width={400}
               height={400}
@@ -306,7 +306,7 @@ export default function Instructors() {
             id="instructor-line-2"
           >
             <Image
-              src="/image-profile-bombeiro-3.jpeg"
+              src="https://res.cloudinary.com/drvploup8/image/upload/v1729536300/Sara_Rayssa_dos_Santos_Gon%C3%A7alves_ibasm7.jpg"
               alt="imagem do instrutor"
               width={400}
               height={400}
@@ -358,7 +358,7 @@ export default function Instructors() {
             id="instructor-line-3"
           >
             <Image
-              src="/image-profile-bombeiro-1.jpeg"
+              src="https://res.cloudinary.com/drvploup8/image/upload/v1729536300/Diego_de_Sousa_Damasceno_Rodrigues_trstyq.jpg"
               alt="imagem do instrutor"
               width={400}
               height={400}

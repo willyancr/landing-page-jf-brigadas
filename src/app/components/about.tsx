@@ -1,9 +1,9 @@
 import Image from "next/image";
-import CardCoursesDetails from "./card-courses-details";
-import CardCoursesBombeiroCivil from "./card-courses-bombeiro-civil";
-import CardCoursesAPH from "./card-courses-aph";
-import CardCoursesSBV from "./card-courses-sbv";
-import CardCoursesTrauma from "./card-courses-trauma";
+import CardCoursesDetails from "./cards-courses/card-courses-details";
+import CardCoursesBombeiroCivil from "./cards-courses/card-courses-bombeiro-civil";
+import CardCoursesAPH from "./cards-courses/card-courses-aph";
+import CardCoursesSBV from "./cards-courses/card-courses-sbv";
+import CardCoursesTrauma from "./cards-courses/card-courses-trauma";
 
 export default function About() {
   return (
@@ -25,7 +25,6 @@ export default function About() {
           </h1>
         </div>
         <div className="flex flex-col gap-14">
-
           <CardCoursesDetails />
           <CardCoursesBombeiroCivil />
           <CardCoursesAPH />
