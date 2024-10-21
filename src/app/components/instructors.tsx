@@ -40,7 +40,7 @@ export default function Instructors() {
             className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
           >
             <Image
-              src="/perfil-ismael.jpg"
+              src="https://res.cloudinary.com/drvploup8/image/upload/v1729536547/perfil-ismael_xsivmz.jpg"
               alt="imagem do instrutor"
               width={400}
               height={400}

@@ -1,13 +1,13 @@
+import CardInstructorCourse from "@/app/components/cards-courses/card-instructor-courses";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowUpRight, Award, BookOpen, Calendar, Clock, Star, Users } from "lucide-react";
+import { Award, BookOpen, Calendar, Clock, Star, Users } from "lucide-react";
 import { FaClock, FaEnvelope, FaMapPin, FaWhatsapp } from "react-icons/fa6";
 import CardSendEmail from "@/app/components/card-send-email";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import Footer from "@/app/components/footer";
 import Header from "@/app/components/header";
+import Footer from "@/app/components/footer";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function TraumaNoAtendimentoPreHospitalar() {
   return (
@@ -16,6 +16,7 @@ export default function TraumaNoAtendimentoPreHospitalar() {
       <main className="mb-24 min-h-screen">
         <div className="relative bg-zinc-100 pb-20">
           <div className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
+            {/* INFO CURSO */}
             <div className="flex flex-col gap-8 md:flex-row md:gap-12">
               <Image
                 src="/image-curso-trauma.jpg"
@@ -92,6 +93,7 @@ export default function TraumaNoAtendimentoPreHospitalar() {
           <div className="relative -mt-20 grid grid-cols-1 gap-10 lg:grid-cols-[70%_30%]">
             <div className="rounded-lg bg-white p-6 pb-20 shadow-md">
               <h2 className="mb-4 text-2xl font-bold">Sobre o curso</h2>
+              {/* DESCRIÇÃO DO CURSO */}
               <div className="space-y-2 text-sm text-zinc-500">
                 <h2 className="text-xl font-bold">
                   Trauma no Atendimento Pré-Hospitalar (APH-B)
@@ -160,62 +162,31 @@ export default function TraumaNoAtendimentoPreHospitalar() {
                   vítima.
                 </p>
               </div>
+
               <div className="my-10 border-b-2 border-zinc-200" />
+
+              {/* INSTRUTORES */}
               <div className="flex flex-col gap-8">
                 <h2 className="text-xl font-bold">Instrutores</h2>
                 <div className="flex flex-col gap-8 sm:flex-row sm:gap-20">
-                  <div className="flex flex-col items-center gap-2">
-                    <Image
-                      src="/perfil-ismael.jpg"
-                      alt="imagem instrutor"
-                      width={100}
-                      height={100}
-                      quality={100}
-                      className="h-28 w-28 rounded-full object-cover"
-                    />
-                    <div className="flex w-52 flex-col items-center text-center">
-                      <h3 className="text-lg font-bold">Ismael Armondes</h3>
-                      <p className="text-sm text-zinc-500">
-                        Médico Ortopedista e Traumatologista; Bombeiro Militar -
-                        TO, atuante de 2006 a 2014.
-                      </p>
-                      <Link
-                        href="/#instructors"
-                        className="mt-2 flex w-fit items-center rounded-md bg-zinc-200 px-2 py-1 text-sm font-semibold text-zinc-500"
-                      >
-                        +INFO
-                        <ArrowUpRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col items-center gap-2">
-                    <Image
-                      src="/image-profile-bombeiro-1.jpeg"
-                      alt="imagem instrutor"
-                      width={100}
-                      height={100}
-                      quality={100}
-                      className="h-28 w-28 rounded-full"
-                    />
-                    <div className="flex w-52 flex-col items-center text-center">
-                      <h3 className="text-lg font-bold">João Paulo de Sousa</h3>
-                      <p className="text-sm text-zinc-500">
-                        Sargento Bombeiro Militar - TO; Bombeiro Profissional
-                        Civil; Bombeiro de Aeródromo; Bombeiro Voluntário;
-                      </p>
-                      <Link
-                        href="/#instructors"
-                        className="mt-2 flex w-fit items-center rounded-md bg-zinc-200 px-2 py-1 text-sm font-semibold text-zinc-500"
-                      >
-                        +INFO
-                        <ArrowUpRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </div>
-                  </div>
+                  <CardInstructorCourse
+                    src="https://res.cloudinary.com/drvploup8/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1729536547/perfil-ismael_xsivmz.jpg"
+                    name="Ismael Armondes"
+                    description="Médico Ortopedista e Traumatologista; Bombeiro Militar
+                          - TO, atuante de 2006 a 2014."
+                    href="/#instructors"
+                  />
+                  <CardInstructorCourse
+                    src="https://res.cloudinary.com/drvploup8/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1729533193/JO%C3%83O-PAULO_zsdy48.jpg"
+                    name="João Paulo de Sousa"
+                    description="Sargento Bombeiro Militar - TO; Bombeiro Profissional
+                          Civil; Bombeiro de Aeródromo; Bombeiro Voluntário;"
+                    href="/#instructors"
+                  />
                 </div>
               </div>
             </div>
+            {/* CARD INFORMAÇÕES */}
             <div className="flex flex-col gap-4">
               <CardSendEmail />
               <Card className="h-fit shadow-md">
