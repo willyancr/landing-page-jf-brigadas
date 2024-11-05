@@ -23,8 +23,8 @@ const images: ImageItem[] = [
   },
   {
     id: "3",
-    url: "/image-curso-brigadista.jpg",
-    title: "",
+    url: "https://res.cloudinary.com/drvploup8/image/upload/v1730771054/Imagem_do_WhatsApp_de_2024-11-01_%C3%A0_s_10.28.26_e2d1d921_v0pahp.jpg",
+    title: "Bombeiro Profissional Civil 2024",
   },
   {
     id: "4",

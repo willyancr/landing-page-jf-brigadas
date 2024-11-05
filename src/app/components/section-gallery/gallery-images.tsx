@@ -3,6 +3,7 @@
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Loading from "../loading";
 
 interface CloudinaryImage {
   asset_id: string;
@@ -14,11 +15,13 @@ export function GalleryImages({ params }: { params: { slug: string } }) {
     null,
   );
   const [images, setImages] = useState<CloudinaryImage[]>([]);
+  const [loading, setLoading] = useState(false);
   const openImage = (image: CloudinaryImage) => setSelectedImage(image);
   const closeImage = () => setSelectedImage(null);
 
   useEffect(() => {
     async function fetchImages() {
+      setLoading(true);
       if (!params.slug) return;
 
       try {
@@ -31,6 +34,8 @@ export function GalleryImages({ params }: { params: { slug: string } }) {
         setImages(data.resources || []);
       } catch (error) {
         console.error("Erro na requisição", error);
+      } finally {
+        setLoading(false);
       }
     }
 
@@ -57,7 +62,7 @@ export function GalleryImages({ params }: { params: { slug: string } }) {
           />
           <div>
             <h1 className="flex items-center gap-2 text-4xl font-semibold">
-              Galeria de imagens
+              Galeria de Imagens
             </h1>
 
             <p className="text-lg uppercase text-secondary">
@@ -65,12 +70,13 @@ export function GalleryImages({ params }: { params: { slug: string } }) {
             </p>
           </div>
         </div>
+        {loading && <Loading />}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {images.map((image) => (
             <div
               key={image.asset_id}
               onClick={() => openImage(image)}
-              className="duration-500 cursor-pointer overflow-hidden rounded-lg shadow-lg transition-all hover:scale-105"
+              className="cursor-pointer overflow-hidden rounded-lg shadow-lg transition-all duration-500 hover:scale-105"
             >
               <Image
                 src={image.secure_url}
