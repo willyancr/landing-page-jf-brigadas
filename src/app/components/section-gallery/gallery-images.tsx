@@ -99,7 +99,7 @@ export function GalleryImages({ params }: { params: { slug: string } }) {
               alt="Imagem de curso"
               width={800}
               height={600}
-              className="h-[600px] w-full animate-modal rounded-lg object-contain"
+              className="h-[600px] w-full animate-modal rounded-2xl object-contain"
             />
           )}
         </DialogContent>

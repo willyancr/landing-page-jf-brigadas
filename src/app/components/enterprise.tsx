@@ -30,18 +30,18 @@ export default function Enterprise() {
             quality={100}
             className="mb-4 h-auto max-w-full"
           />
-          <div className="flex w-[400px] flex-col gap-2 p-4 text-gray-300">
-            <p className="rounded-md bg-secondary/30 p-2 text-sm">
+          <div className="flex w-full max-w-md flex-col gap-2 p-4 text-gray-300 sm:max-w-lg">
+            <p className="rounded-md bg-secondary/30 p-2 text-sm sm:text-base">
               <strong>MISSÃO:</strong> Formar profissionais técnicos e
               capacitados para atividade de bombeiro profissional civil.
             </p>
-            <p className="rounded-md bg-secondary/30 p-2 text-sm">
+            <p className="rounded-md bg-secondary/30 p-2 text-sm sm:text-base">
               <strong>VISÃO:</strong> Ser uma empresa reconhecida pela
               qualidade, bem como uma empresa transformadora da realidade social
               e humana.
             </p>
-            <p className="rounded-md bg-secondary/30 p-2 text-sm">
-              <strong>VALORES:</strong> Ética, humanismo, responsbilidade
+            <p className="rounded-md bg-secondary/30 p-2 text-sm sm:text-base">
+              <strong>VALORES:</strong> Ética, humanismo, responsabilidade
               social, integridade e inovação.
             </p>
           </div>
