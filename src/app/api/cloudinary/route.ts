@@ -16,7 +16,7 @@ export async function GET(req: Request) {
     // Faz uma requisi o para a API do Cloudinary para buscar as imagens
     // contidas na pasta 'JF-BRIGADAS' com o slug passado na query string
     const response = await fetch(
-      `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_NAME}/resources/image/upload?asset_folder=JF-BRIGADAS&max_results=30`,
+      `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_NAME}/resources/image/upload?asset_folder=JF-BRIGADAS&max_results=500`,
       {
         headers: {
           Authorization: `Basic ${Buffer.from(
