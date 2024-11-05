@@ -1,5 +1,9 @@
 "use client";
 
+import SocialMediaLink from "./social-midia-link";
+import { leftAnimation } from "../lib/animation";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   FaFacebook,
   FaInstagram,
@@ -7,10 +11,6 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa6";
-import SocialMediaLink from "./social-midia-link";
-import { leftAnimation } from "../lib/animation";
-import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function Instructors() {
   return (
@@ -197,110 +197,6 @@ export default function Instructors() {
 
           <motion.div
             {...leftAnimation}
-            transition={{ duration: 0.3, delay: 0.2 }}
-            className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
-            id="instructor-line-2"
-          >
-            <Image
-              src="https://res.cloudinary.com/drvploup8/image/upload/v1729536300/Erika_Silva_Pereira_Ara%C3%BAjo_amynyb.jpg"
-              alt="imagem do instrutor"
-              width={400}
-              height={400}
-              quality={100}
-              className="h-[350px] w-full rounded-md object-cover"
-            />
-            <div className="flex flex-col gap-1">
-              <h2 className="text-2xl font-bold">Erika Silva Pereira Araújo</h2>
-              <p>
-                Técnica em Segurança do Trabalho; Bombeiro Profissional Civil.
-              </p>
-            </div>
-            <div>
-              <p>
-                <strong>Áreas de Instrução:</strong>
-              </p>
-              <ul>
-                <li>→ Produtos Perigosos</li>
-                <li>→ Primeiros Socorros</li>
-                <li>
-                  → Prevenção e Combate a Incêndios e Equipamentos Auxiliares de
-                  Incêndios
-                </li>
-                <li>→ Atividade operacional do Bombeiro Profissional Civil</li>
-                <li>→ Brigadas de Incêndios</li>
-              </ul>
-            </div>
-            <div className="flex items-center gap-4">
-              <SocialMediaLink href="https://www.instagram.com/erikasilper">
-                <FaInstagram size={24} />
-              </SocialMediaLink>
-              <SocialMediaLink href="https://www.facebook.com">
-                <FaFacebook size={24} />
-              </SocialMediaLink>
-              <SocialMediaLink href="https://www.linkedin.com">
-                <FaLinkedin size={24} />
-              </SocialMediaLink>
-            </div>
-          </motion.div>
-
-          <motion.div
-            {...leftAnimation}
-            transition={{ duration: 0.3, delay: 0.3 }}
-            className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
-            id="instructor-line-2"
-          >
-            <Image
-              src="https://res.cloudinary.com/drvploup8/image/upload/v1729536300/Luiz_Henrique_Barbosa_Fernandes_s0qqb8.jpg"
-              alt="imagem do instrutor"
-              width={400}
-              height={400}
-              quality={100}
-              className="h-[350px] w-full rounded-md object-cover"
-            />
-            <div className="flex flex-col gap-1">
-              <h2 className="text-lg font-bold">
-                Luiz Henrique Barbosa Fernandes
-              </h2>
-              <p>
-                Técnico em Segurança do Trabalho; Bombeiro Profissional Civil.
-              </p>
-            </div>
-            <div>
-              <p>
-                <strong>Áreas de Instrução:</strong>
-              </p>
-              <ul>
-                <li>→ Espaço Confinado – NR 33</li>
-                <li>→ Trabalho em Altura - NR 35</li>
-                <li>→ Primeiros Socorros</li>
-                <li>
-                  → Instrutor de Prevenção e Combate a Incêndios e Equipamentos
-                  Auxiliares de Incêndios
-                </li>
-                <li>→ Supervisor de Resgate</li>
-                <li>→ Supervisor de Espaço Confinado</li>
-                <li>→ Supervisor de Trabalho em Altura</li>
-                <li>→ Auditor Interno ISO 45001 e 14001</li>
-                <li>→ Gestor de Segurança do Trabalho</li>
-                <li>→ Especialista em eSocial</li>
-                <li>→ Especialista Gestão Ocupacional</li>
-              </ul>
-            </div>
-            <div className="flex items-center gap-4">
-              <SocialMediaLink href="https://www.instagram.com">
-                <FaInstagram size={24} />
-              </SocialMediaLink>
-              <SocialMediaLink href="https://www.facebook.com">
-                <FaFacebook size={24} />
-              </SocialMediaLink>
-              <SocialMediaLink href="https://www.linkedin.com">
-                <FaLinkedin size={24} />
-              </SocialMediaLink>
-            </div>
-          </motion.div>
-
-          <motion.div
-            {...leftAnimation}
             transition={{ duration: 0.3, delay: 0.4 }}
             className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
             id="instructor-line-2"
@@ -355,6 +251,54 @@ export default function Instructors() {
             {...leftAnimation}
             transition={{ duration: 0.3, delay: 0.2 }}
             className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
+            id="instructor-line-2"
+          >
+            <Image
+              src="https://res.cloudinary.com/drvploup8/image/upload/v1729536300/Erika_Silva_Pereira_Ara%C3%BAjo_amynyb.jpg"
+              alt="imagem do instrutor"
+              width={400}
+              height={400}
+              quality={100}
+              className="h-[350px] w-full rounded-md object-cover"
+            />
+            <div className="flex flex-col gap-1">
+              <h2 className="text-2xl font-bold">Erika Silva Pereira Araújo</h2>
+              <p>
+                Técnica em Segurança do Trabalho; Bombeiro Profissional Civil.
+              </p>
+            </div>
+            <div>
+              <p>
+                <strong>Áreas de Instrução:</strong>
+              </p>
+              <ul>
+                <li>→ Produtos Perigosos</li>
+                <li>→ Primeiros Socorros</li>
+                <li>
+                  → Prevenção e Combate a Incêndios e Equipamentos Auxiliares de
+                  Incêndios
+                </li>
+                <li>→ Atividade operacional do Bombeiro Profissional Civil</li>
+                <li>→ Brigadas de Incêndios</li>
+              </ul>
+            </div>
+            <div className="flex items-center gap-4">
+              <SocialMediaLink href="https://www.instagram.com/erikasilper">
+                <FaInstagram size={24} />
+              </SocialMediaLink>
+              <SocialMediaLink href="https://www.facebook.com">
+                <FaFacebook size={24} />
+              </SocialMediaLink>
+              <SocialMediaLink href="https://www.linkedin.com">
+                <FaLinkedin size={24} />
+              </SocialMediaLink>
+            </div>
+          </motion.div>
+
+          <motion.div
+            {...leftAnimation}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
             id="instructor-line-3"
           >
             <Image
@@ -388,6 +332,62 @@ export default function Instructors() {
                 <li>→ NR6 (EPI e EPRA)</li>
                 <li>→ Prevenção e Combate a Incêndios</li>
                 <li>→ Primeiros Socorros</li>
+              </ul>
+            </div>
+            <div className="flex items-center gap-4">
+              <SocialMediaLink href="https://www.instagram.com">
+                <FaInstagram size={24} />
+              </SocialMediaLink>
+              <SocialMediaLink href="https://www.facebook.com">
+                <FaFacebook size={24} />
+              </SocialMediaLink>
+              <SocialMediaLink href="https://www.linkedin.com">
+                <FaLinkedin size={24} />
+              </SocialMediaLink>
+            </div>
+          </motion.div>
+
+          <motion.div
+            {...leftAnimation}
+            transition={{ duration: 0.3, delay: 0.3 }}
+            className="flex flex-col gap-4 rounded-md bg-primary/10 p-4 shadow-lg"
+            id="instructor-line-2"
+          >
+            <Image
+              src="https://res.cloudinary.com/drvploup8/image/upload/v1729536300/Luiz_Henrique_Barbosa_Fernandes_s0qqb8.jpg"
+              alt="imagem do instrutor"
+              width={400}
+              height={400}
+              quality={100}
+              className="h-[350px] w-full rounded-md object-cover"
+            />
+            <div className="flex flex-col gap-1">
+              <h2 className="text-lg font-bold">
+                Luiz Henrique Barbosa Fernandes
+              </h2>
+              <p>
+                Técnico em Segurança do Trabalho; Bombeiro Profissional Civil.
+              </p>
+            </div>
+            <div>
+              <p>
+                <strong>Áreas de Instrução:</strong>
+              </p>
+              <ul>
+                <li>→ Espaço Confinado – NR 33</li>
+                <li>→ Trabalho em Altura - NR 35</li>
+                <li>→ Primeiros Socorros</li>
+                <li>
+                  → Instrutor de Prevenção e Combate a Incêndios e Equipamentos
+                  Auxiliares de Incêndios
+                </li>
+                <li>→ Supervisor de Resgate</li>
+                <li>→ Supervisor de Espaço Confinado</li>
+                <li>→ Supervisor de Trabalho em Altura</li>
+                <li>→ Auditor Interno ISO 45001 e 14001</li>
+                <li>→ Gestor de Segurança do Trabalho</li>
+                <li>→ Especialista em eSocial</li>
+                <li>→ Especialista Gestão Ocupacional</li>
               </ul>
             </div>
             <div className="flex items-center gap-4">
