@@ -13,12 +13,12 @@ interface ImageItem {
 const images: ImageItem[] = [
   {
     id: "1",
-    url: "https://res.cloudinary.com/drvploup8/image/upload/v1730461465/CAPA_m3hbf6.jpg",
+    url: "https://res.cloudinary.com/drvploup8/image/upload/v1730810137/CAPA_ar1e2o.jpg",
     title: "SBV",
   },
   {
     id: "2",
-    url: "https://res.cloudinary.com/drvploup8/image/upload/v1730461502/jfbrigadas_20240304_p_3316287679929893142_2_3316287675265797423_olqk0f.jpg",
+    url: "https://res.cloudinary.com/drvploup8/image/upload/v1730810276/jfbrigadas_20240304_p_3316287679929893142_6_3316287675282553669_lrs11s.jpg",
     title: "Trauma no atendimento pré-hospitalar",
   },
   {
@@ -54,7 +54,6 @@ const images: ImageItem[] = [
 ];
 
 export function SectionGallery() {
-  
   function titleToSlug(title: string) {
     return title
       .toLowerCase() // Converte para minúsculas
