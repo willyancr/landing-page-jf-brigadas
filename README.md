@@ -2,6 +2,7 @@
 
 Esta é a landing page da **JF Brigadas**, uma empresa que oferece cursos de Brigada de Incêndio, Bombeiro Civil, e Suporte Básico de Vida (SBV). A landing page apresenta informações sobre os cursos, instrutores e um formulário de contato.
 
+
 ## Tecnologias Utilizadas
 
 - **Next.js 14**: Framework React para a criação de páginas dinâmicas e estáticas.
