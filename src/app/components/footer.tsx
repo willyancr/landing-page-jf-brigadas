@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-0">
           <div className="mt-8 flex flex-col items-center gap-2 md:items-start">
             <Image
-              src="/logo-2.png"
+              src="/logo-vertical.png"
               alt="Logo"
               width={150}
               height={150}

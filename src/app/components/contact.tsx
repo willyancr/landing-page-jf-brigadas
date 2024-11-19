@@ -39,7 +39,7 @@ export default function Contact() {
           <CardHeader>
             <CardTitle className="mb-4 flex flex-col items-center text-2xl font-semibold">
               <Image
-                src="/logo-2.png"
+                src="/logo-vertical.png"
                 alt="icon contato"
                 width={100}
                 height={100}

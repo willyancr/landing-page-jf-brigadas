@@ -57,8 +57,12 @@ const config: Config = {
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#e68600",
+          DEFAULT: "#e41e26",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        tertiary: {
+          DEFAULT: "#e68600",
+          foreground: "hsl(var(--tertiary-foreground))",
         },
         card: {
           DEFAULT: "hsl(var(--card))",

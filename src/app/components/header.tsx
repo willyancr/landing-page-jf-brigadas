@@ -21,12 +21,12 @@ export default function Header() {
       <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-4 py-4 md:px-12">
         <Link href="/">
           <Image
-            src="/logo-2.png"
+            src="/logo-horizontal.png"
             alt="JF Brigadas"
-            width={100}
-            height={100}
+            width={200}
+            height={200}
             quality={100}
-            className="md:h-[80px] md:w-[100px]"
+            // className="md:h-[80px] md:w-[100px]"
           />
         </Link>
 

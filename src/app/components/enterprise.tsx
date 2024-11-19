@@ -23,7 +23,7 @@ export default function Enterprise() {
       <div className="grid grid-cols-1 gap-6 rounded-lg bg-image-card-info bg-cover p-4 text-zinc-50 shadow-lg sm:p-6 md:grid-cols-2">
         <div className="flex flex-col items-center justify-between border-secondary/50 md:border-r">
           <Image
-            src="/logo-2.png"
+            src="/logo-vertical.png"
             alt="icon contato"
             width={300}
             height={300}
@@ -66,7 +66,7 @@ export default function Enterprise() {
               </div>
             ))}
           </div>
-          <Button className="w-full bg-secondary text-primary sm:w-fit">
+          <Button className="w-full bg-secondary text-zinc-50 sm:w-fit">
             <a
               href="https://wa.me/5563999595787"
               target="_blank"

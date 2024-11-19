@@ -74,7 +74,7 @@ export default function TraumaNoAtendimentoPreHospitalar() {
                 </div>
               </div>
               <div className="mt-4 md:ml-auto md:mt-0">
-                <Button className="w-full bg-primary text-white hover:bg-secondary hover:text-primary md:w-auto">
+                <Button className="w-full bg-primary text-white hover:bg-secondary hover:text-zinc-50 md:w-auto">
                   <a
                     href="https://wa.me/5563999595787"
                     target="_blank"

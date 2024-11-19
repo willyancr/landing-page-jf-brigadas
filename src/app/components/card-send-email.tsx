@@ -82,7 +82,7 @@ export default function CardSendEmail() {
             />
             {isLoading ? (
               <Button
-                className="flex w-full items-center gap-2 bg-primary text-white"
+                className="flex w-full items-center gap-2 bg-primary text-zinc-50"
                 type="submit"
                 disabled
               >
@@ -92,7 +92,7 @@ export default function CardSendEmail() {
             ) : (
               <Button
                 type="submit"
-                className="w-full bg-primary text-white hover:bg-secondary hover:text-primary"
+                className="w-full bg-primary text-zinc-50 hover:bg-secondary hover:text-zinc-50"
               >
                 Solicitar mais informações
                 <FaEnvelope className="ml-3 h-4 w-4" />
