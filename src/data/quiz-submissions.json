@@ -1,0 +1,104 @@
+[
+  {
+    "id": "SUB-1790640778535-HB8R6",
+    "name": "Willyan Costa",
+    "email": "willyancr@gmail.com",
+    "score": 11,
+    "totalQuestions": 15,
+    "percentage": 73.3,
+    "status": "APROVADO",
+    "submittedAt": "2026-09-29T00:12:58.535Z",
+    "answers": [
+      {
+        "questionId": 1,
+        "selectedKey": "A",
+        "correctKey": "B",
+        "isCorrect": false
+      },
+      {
+        "questionId": 2,
+        "selectedKey": "A",
+        "correctKey": "B",
+        "isCorrect": false
+      },
+      {
+        "questionId": 3,
+        "selectedKey": "A",
+        "correctKey": "A",
+        "isCorrect": true
+      },
+      {
+        "questionId": 4,
+        "selectedKey": "C",
+        "correctKey": "C",
+        "isCorrect": true
+      },
+      {
+        "questionId": 5,
+        "selectedKey": "B",
+        "correctKey": "B",
+        "isCorrect": true
+      },
+      {
+        "questionId": 6,
+        "selectedKey": "A",
+        "correctKey": "A",
+        "isCorrect": true
+      },
+      {
+        "questionId": 7,
+        "selectedKey": "B",
+        "correctKey": "B",
+        "isCorrect": true
+      },
+      {
+        "questionId": 8,
+        "selectedKey": "C",
+        "correctKey": "C",
+        "isCorrect": true
+      },
+      {
+        "questionId": 9,
+        "selectedKey": "C",
+        "correctKey": "C",
+        "isCorrect": true
+      },
+      {
+        "questionId": 10,
+        "selectedKey": "B",
+        "correctKey": "B",
+        "isCorrect": true
+      },
+      {
+        "questionId": 11,
+        "selectedKey": "A",
+        "correctKey": "A",
+        "isCorrect": true
+      },
+      {
+        "questionId": 12,
+        "selectedKey": "C",
+        "correctKey": "A",
+        "isCorrect": false
+      },
+      {
+        "questionId": 13,
+        "selectedKey": "A",
+        "correctKey": "A",
+        "isCorrect": true
+      },
+      {
+        "questionId": 14,
+        "selectedKey": "B",
+        "correctKey": "B",
+        "isCorrect": true
+      },
+      {
+        "questionId": 15,
+        "selectedKey": "C",
+        "correctKey": "B",
+        "isCorrect": false
+      }
+    ]
+  }
+]

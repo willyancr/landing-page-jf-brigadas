@@ -28,7 +28,7 @@ export async function POST(request: Request) {
 
   const mailOptions: nodemailer.SendMailOptions = {
     from: "willyancr@gmail.com",
-    to: "willyancr@gmail.com",
+    to: "jfbrigada@hotmail.com",
     subject: `Novo contato de ${name}`,
     text: message,
     replyTo: email,

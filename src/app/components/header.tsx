@@ -11,6 +11,7 @@ const navItemsHome = [
   { id: 3, title: "Contato", href: "/#contact" },
   { id: 4, title: "FAQs", href: "/#faqs" },
   { id: 5, title: "Empresa", href: "/#enterprise" },
+  { id: 6, title: "Simulado", href: "/teste" },
 ];
 
 export default function Header() {
