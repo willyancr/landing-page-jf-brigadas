@@ -155,11 +155,12 @@ export function generateQuizPDF(submission: QuizSubmission) {
     { align: "center" }
   );
 
+  const minAcertos = Math.ceil((submission.totalQuestions || 10) * 0.7);
   doc.setFont("helvetica", "normal");
   doc.setFontSize(8.5);
   doc.setTextColor(100, 116, 139);
   doc.text(
-    "Critério de aprovação: Pontuação igual ou superior a 70% (mínimo de 11 acertos).",
+    `Critério de aprovação: Pontuação igual ou superior a 70% (mínimo de ${minAcertos} acertos).`,
     pageWidth / 2,
     166,
     { align: "center" }
@@ -173,10 +174,11 @@ export function generateQuizPDF(submission: QuizSubmission) {
 
   const startY = 187;
   const colWidth = (pageWidth - 40) / 2;
+  const mid = Math.ceil(submission.answers.length / 2);
 
   submission.answers.forEach((ans, idx) => {
-    const col = idx < 8 ? 0 : 1;
-    const row = idx < 8 ? idx : idx - 8;
+    const col = idx < mid ? 0 : 1;
+    const row = idx < mid ? idx : idx - mid;
     const x = 18 + col * colWidth;
     const y = startY + row * 6.5;
 

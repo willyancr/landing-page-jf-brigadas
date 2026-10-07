@@ -21,12 +21,14 @@ import {
   RotateCcw,
   Flame,
   HeartPulse,
+  Activity,
+  ShieldAlert,
 } from "lucide-react";
 import {
   AVAILABLE_QUIZZES,
   QuizId,
   QuizConfig,
-  TOTAL_QUESTIONS,
+  OptionKey,
   Question,
   getQuizById,
 } from "@/data/quiz-questions";
@@ -52,7 +54,7 @@ function QuizContent() {
 
   // Estado do Questionário em Execução
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<number, "A" | "B" | "C">>({});
+  const [answers, setAnswers] = useState<Record<number, OptionKey>>({});
   const [showHint, setShowHint] = useState(false);
 
   // Submissão e Resultados
@@ -66,6 +68,8 @@ function QuizContent() {
 
   // Questionário ativo
   const activeQuiz: QuizConfig = getQuizById(selectedQuizId);
+  const totalQuestions = activeQuiz.questions.length;
+  const minPassingScore = Math.ceil(totalQuestions * 0.7);
 
   // Ler query params e dados salvos na montagem
   useEffect(() => {
@@ -75,7 +79,9 @@ function QuizContent() {
         const quizParam = params.get("quiz");
         if (
           quizParam === "brigada-incendio" ||
-          quizParam === "primeiros-socorros"
+          quizParam === "primeiros-socorros" ||
+          quizParam === "sbv" ||
+          quizParam === "trauma-aph"
         ) {
           setSelectedQuizId(quizParam as QuizId);
         }
@@ -154,7 +160,7 @@ function QuizContent() {
   const hasAnsweredCurrent = selectedAnswer !== undefined;
 
   // Selecionar Opção (Imediato)
-  const handleSelectOption = (key: "A" | "B" | "C") => {
+  const handleSelectOption = (key: OptionKey) => {
     if (hasAnsweredCurrent) return;
 
     setAnswers((prev) => ({
@@ -167,7 +173,7 @@ function QuizContent() {
   const handleNext = async () => {
     if (!hasAnsweredCurrent) return;
 
-    if (currentQuestionIndex < TOTAL_QUESTIONS - 1) {
+    if (currentQuestionIndex < totalQuestions - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
       setShowHint(false);
     } else {
@@ -246,7 +252,7 @@ function QuizContent() {
           CABEÇALHO PADRÃO DO MODELO DA IMAGEM
       ======================================================== */}
       <header className="w-full border-b border-zinc-800/80 bg-[#11131a]/90 backdrop-blur-md sticky top-0 z-50">
-        <div className="max-w-4xl mx-auto px-4 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-5xl mx-auto px-4 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           {/* Logo Oficial da Página Principal */}
           <Link
             href="/"
@@ -286,7 +292,7 @@ function QuizContent() {
 
         {/* BARRA DE PROGRESSO SEGMENTADA */}
         {currentStep === "QUIZ" && (
-          <div className="w-full max-w-4xl mx-auto px-4 pb-3">
+          <div className="w-full max-w-5xl mx-auto px-4 pb-3">
             <div className="flex items-center justify-between gap-4">
               <div className="flex-1 flex items-center gap-1 sm:gap-1.5">
                 {activeQuiz.questions.map((q, idx) => {
@@ -312,7 +318,7 @@ function QuizContent() {
               </div>
 
               <div className="text-xs sm:text-sm font-semibold text-zinc-300 shrink-0">
-                {currentQuestionIndex + 1} / {TOTAL_QUESTIONS}
+                {currentQuestionIndex + 1} / {totalQuestions}
               </div>
             </div>
           </div>
@@ -327,7 +333,7 @@ function QuizContent() {
             1. TELA DE IDENTIFICAÇÃO E ESCOLHA DO QUESTIONÁRIO
         ==================================================== */}
         {currentStep === "IDENTIFICATION" && (
-          <div className="w-full max-w-2xl bg-[#14161f] border border-zinc-800/90 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/80">
+          <div className="w-full max-w-4xl bg-[#14161f] border border-zinc-800/90 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/80">
             {/* Logo da Página Principal no Card */}
             <div className="flex justify-center mb-5">
               <Image
@@ -344,13 +350,13 @@ function QuizContent() {
               <h2 className="text-xl sm:text-2xl font-extrabold text-white">
                 Portal de Avaliações Técnicas
               </h2>
-              <p className="text-xs sm:text-sm text-zinc-400 mt-1 max-w-md mx-auto">
-                Preencha seus dados e selecione o questionário que deseja realizar.
+              <p className="text-xs sm:text-sm text-zinc-400 mt-1 max-w-lg mx-auto">
+                Preencha seus dados cadastrais e escolha qual questionário você deseja realizar.
               </p>
             </div>
 
             {/* Formulário de Identificação */}
-            <form onSubmit={handleStartQuiz} className="space-y-5">
+            <form onSubmit={handleStartQuiz} className="space-y-6">
               {formError && (
                 <div className="p-3 bg-red-950/50 border border-red-800/70 rounded-xl text-red-300 text-xs sm:text-sm flex items-center gap-2">
                   <AlertCircle className="w-4 h-4 shrink-0 text-red-400" />
@@ -395,13 +401,13 @@ function QuizContent() {
                 </div>
               </div>
 
-              {/* SELEÇÃO DO QUESTIONÁRIO (CARDS MODERNOS) */}
+              {/* SELEÇÃO DO QUESTIONÁRIO (CARDS MODERNOS - 3 OPÇÕES) */}
               <div>
                 <label className="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2.5">
-                  Selecione o Questionário:
+                  Selecione a Avaliação Desejada:
                 </label>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {AVAILABLE_QUIZZES.map((quiz) => {
                     const isSelected = selectedQuizId === quiz.id;
 
@@ -411,7 +417,7 @@ function QuizContent() {
                         onClick={() => setSelectedQuizId(quiz.id)}
                         className={`cursor-pointer rounded-2xl p-4 sm:p-5 border transition-all duration-200 flex flex-col justify-between relative text-left ${
                           isSelected
-                            ? "bg-gradient-to-b from-[#221c23] to-[#1a1c26] border-red-500 ring-2 ring-red-500/30 shadow-lg shadow-red-950/40"
+                            ? "bg-gradient-to-b from-[#251d23] to-[#1a1c26] border-red-500 ring-2 ring-red-500/30 shadow-lg shadow-red-950/40"
                             : "bg-[#181a24] border-zinc-800/90 hover:border-zinc-700 hover:bg-[#1e202d]"
                         }`}
                       >
@@ -428,7 +434,7 @@ function QuizContent() {
                           </span>
 
                           <div
-                            className={`w-4 h-4 rounded-full border flex items-center justify-center ${
+                            className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
                               isSelected
                                 ? "border-red-500 bg-red-600"
                                 : "border-zinc-600 bg-zinc-800"
@@ -446,13 +452,21 @@ function QuizContent() {
                             className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border ${
                               quiz.iconType === "first-aid"
                                 ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/30"
-                                : "bg-red-500/10 text-red-400 border-red-500/30"
+                                : quiz.iconType === "fire"
+                                ? "bg-red-500/10 text-red-400 border-red-500/30"
+                                : quiz.iconType === "heart-pulse"
+                                ? "bg-amber-500/10 text-amber-400 border-amber-500/30"
+                                : "bg-cyan-500/10 text-cyan-400 border-cyan-500/30"
                             }`}
                           >
                             {quiz.iconType === "first-aid" ? (
                               <HeartPulse className="w-5 h-5" />
-                            ) : (
+                            ) : quiz.iconType === "fire" ? (
                               <Flame className="w-5 h-5" />
+                            ) : quiz.iconType === "heart-pulse" ? (
+                              <Activity className="w-5 h-5" />
+                            ) : (
+                              <ShieldAlert className="w-5 h-5" />
                             )}
                           </div>
 
@@ -467,7 +481,7 @@ function QuizContent() {
                         </div>
 
                         {/* Descrição resumida */}
-                        <p className="text-xs text-zinc-400 leading-relaxed mt-1">
+                        <p className="text-xs text-zinc-400 leading-relaxed mt-1 line-clamp-3">
                           {quiz.shortDescription}
                         </p>
                       </div>
@@ -480,10 +494,9 @@ function QuizContent() {
               <div className="bg-[#1a1c26] border border-zinc-800 rounded-xl p-3.5 text-xs text-zinc-300 flex items-center gap-3">
                 <Award className="w-5 h-5 text-amber-500 shrink-0" />
                 <span>
-                  Cada questão vale 1 ponto. Nota mínima de aprovação:{" "}
-                  <strong className="text-white">70% (11 acertos)</strong>. Envio
-                  automático para <strong>jfbrigada@hotmail.com</strong> com PDF
-                  para download.
+                  Cada questão vale 1 ponto (total: {totalQuestions} pontos). Aprovação mínima:{" "}
+                  <strong className="text-white">70% ({minPassingScore} acertos)</strong>. Envio
+                  automático para <strong>jfbrigada@hotmail.com</strong> e emissão de comprovante em PDF.
                 </span>
               </div>
 
@@ -523,7 +536,7 @@ function QuizContent() {
               </h2>
             </div>
 
-            {/* Alternativas de Resposta */}
+            {/* Alternativas de Resposta (A, B, C, D) */}
             <div className="space-y-3 mb-6">
               {currentQuestion.options.map((option) => {
                 const isSelected = selectedAnswer === option.key;
@@ -643,7 +656,7 @@ function QuizContent() {
                 >
                   {isSubmitting ? (
                     <span>Registrando e enviando...</span>
-                  ) : currentQuestionIndex < TOTAL_QUESTIONS - 1 ? (
+                  ) : currentQuestionIndex < totalQuestions - 1 ? (
                     <>
                       <span>Próxima Pergunta</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -716,7 +729,7 @@ function QuizContent() {
                 <span className="text-2xl sm:text-3xl font-black text-white">
                   {submissionResult.score}{" "}
                   <span className="text-base font-normal text-zinc-400">
-                    / {TOTAL_QUESTIONS}
+                    / {submissionResult.totalQuestions || totalQuestions}
                   </span>
                 </span>
               </div>
@@ -787,8 +800,8 @@ function QuizContent() {
             <div className="mt-8 border-t border-zinc-800/80 pt-6">
               <h3 className="text-sm font-bold text-zinc-200 uppercase tracking-wider mb-4 flex items-center gap-2">
                 <span>
-                  Revisão do Gabarito ({submissionResult.score}/{TOTAL_QUESTIONS}{" "}
-                  Acertos)
+                  Revisão do Gabarito ({submissionResult.score}/
+                  {submissionResult.totalQuestions || totalQuestions} Acertos)
                 </span>
               </h3>
 

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer, { Transporter } from "nodemailer";
-import { getQuizById, PASSING_PERCENTAGE, TOTAL_QUESTIONS } from "@/data/quiz-questions";
+import { getQuizById, PASSING_PERCENTAGE } from "@/data/quiz-questions";
 import { saveSubmission, QuizSubmission, SubmissionAnswer } from "@/data/quiz-storage";
 
 export async function POST(request: Request) {
@@ -24,6 +24,7 @@ export async function POST(request: Request) {
 
     const normalizedEmail = email.trim().toLowerCase();
     const quiz = getQuizById(quizId || "primeiros-socorros");
+    const totalQuestions = quiz.questions.length;
 
     // Validar e calcular pontuação oficial no backend
     let score = 0;
@@ -42,7 +43,7 @@ export async function POST(request: Request) {
       });
     });
 
-    const percentage = Number(((score / TOTAL_QUESTIONS) * 100).toFixed(1));
+    const percentage = Number(((score / totalQuestions) * 100).toFixed(1));
     const status: "APROVADO" | "REPROVADO" =
       percentage >= PASSING_PERCENTAGE ? "APROVADO" : "REPROVADO";
 
@@ -53,7 +54,7 @@ export async function POST(request: Request) {
       name: name.trim(),
       email: normalizedEmail,
       score,
-      totalQuestions: TOTAL_QUESTIONS,
+      totalQuestions,
       percentage,
       status,
       submittedAt: new Date().toISOString(),
@@ -69,6 +70,7 @@ export async function POST(request: Request) {
 
     let emailSent = false;
     let emailError: string | null = null;
+    const minPassingScore = Math.ceil(totalQuestions * (PASSING_PERCENTAGE / 100));
 
     if (gmailUser && gmailPass) {
       try {
@@ -149,13 +151,13 @@ export async function POST(request: Request) {
                     ${status}
                   </span>
                   <div style="font-size: 32px; font-weight: 800; color: #0f172a; margin-top: 8px;">
-                    ${score} / ${TOTAL_QUESTIONS} <span style="font-size: 20px; font-weight: 500; color: #64748b;">pontos</span>
+                    ${score} / ${totalQuestions} <span style="font-size: 20px; font-weight: 500; color: #64748b;">pontos</span>
                   </div>
                   <div style="font-size: 18px; font-weight: 700; color: ${statusColor}; margin-top: 4px;">
                     Aproveitamento: ${percentage}%
                   </div>
                   <div style="font-size: 12px; color: #94a3b8; margin-top: 6px;">
-                    Nota mínima exigida para aprovação: ${PASSING_PERCENTAGE}% (11 acertos)
+                    Nota mínima exigida para aprovação: ${PASSING_PERCENTAGE}% (${minPassingScore} acertos)
                   </div>
                 </div>
 
@@ -179,12 +181,12 @@ export async function POST(request: Request) {
           from: `"JF Brigadas - Avaliações" <${gmailUser}>`,
           to: "jfbrigada@hotmail.com",
           replyTo: submission.email,
-          subject: `[Avaliação JF Brigadas - ${quiz.badge}] ${status} - ${submission.name} (${score}/${TOTAL_QUESTIONS} - ${percentage}%)`,
+          subject: `[Avaliação JF Brigadas - ${quiz.badge}] ${status} - ${submission.name} (${score}/${totalQuestions} - ${percentage}%)`,
           text: `Resultado da Avaliação: ${quiz.title}
 Nome: ${submission.name}
 Email: ${submission.email}
 Avaliação: ${quiz.title}
-Pontuação: ${score}/${TOTAL_QUESTIONS} (${percentage}%)
+Pontuação: ${score}/${totalQuestions} (${percentage}%)
 Status: ${status}
 Data: ${new Date().toLocaleString("pt-BR")}`,
           html: mailHtml,

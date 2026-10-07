@@ -3,8 +3,8 @@ import path from "path";
 
 export interface SubmissionAnswer {
   questionId: number;
-  selectedKey: "A" | "B" | "C";
-  correctKey: "A" | "B" | "C";
+  selectedKey: string;
+  correctKey: string;
   isCorrect: boolean;
 }
 
