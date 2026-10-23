@@ -36,3 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 _CHECK-LIST.md
+# PDFs originais do cliente (fonte das apostilas; não publicar)
+/materiais-originais

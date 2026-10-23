@@ -23,6 +23,7 @@ import {
   HeartPulse,
   Activity,
   ShieldAlert,
+  BookOpen,
 } from "lucide-react";
 import {
   AVAILABLE_QUIZZES,
@@ -33,6 +34,7 @@ import {
   getQuizById,
 } from "@/data/quiz-questions";
 import { QuizSubmission } from "@/data/quiz-storage";
+import { getMaterialByQuizId } from "@/data/study-materials";
 import { generateQuizPDF } from "@/lib/generate-certificate-pdf";
 
 type Step = "IDENTIFICATION" | "QUIZ" | "RESULT" | "ALREADY_COMPLETED";
@@ -70,6 +72,7 @@ function QuizContent() {
   const activeQuiz: QuizConfig = getQuizById(selectedQuizId);
   const totalQuestions = activeQuiz.questions.length;
   const minPassingScore = Math.ceil(totalQuestions * 0.7);
+  const activeMaterial = getMaterialByQuizId(selectedQuizId);
 
   // Ler query params e dados salvos na montagem
   useEffect(() => {
@@ -490,6 +493,38 @@ function QuizContent() {
                 </div>
               </div>
 
+              {/* Material de Estudo do Questionário Selecionado */}
+              {activeMaterial && (
+                <div className="bg-[#1a1c26] border border-amber-500/30 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3">
+                  <div className="flex items-start gap-3 flex-1">
+                    <BookOpen className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm font-bold text-white">
+                        Estude antes: apostila de {activeMaterial.title}
+                      </p>
+                      <p className="text-xs text-zinc-400 mt-0.5">
+                        Leia online ou baixe o PDF com todo o conteúdo cobrado no teste.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-2 shrink-0">
+                    <Link
+                      href={`/teste/materiais/${activeMaterial.slug}`}
+                      className="flex-1 sm:flex-none text-center text-xs font-semibold px-3.5 py-2 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 transition-colors"
+                    >
+                      Ler online
+                    </Link>
+                    <a
+                      href={activeMaterial.pdfPath}
+                      download
+                      className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-lg bg-zinc-800/80 hover:bg-zinc-700/80 text-zinc-200 border border-zinc-700/60 transition-colors"
+                    >
+                      <Download className="w-3.5 h-3.5" /> PDF
+                    </a>
+                  </div>
+                </div>
+              )}
+
               {/* Informações Complementares */}
               <div className="bg-[#1a1c26] border border-zinc-800 rounded-xl p-3.5 text-xs text-zinc-300 flex items-center gap-3">
                 <Award className="w-5 h-5 text-amber-500 shrink-0" />
@@ -716,6 +751,14 @@ function QuizContent() {
                     </strong>{" "}
                     e fortaleça seus conhecimentos para a próxima tentativa.
                   </p>
+                  {activeMaterial && (
+                    <Link
+                      href={`/teste/materiais/${activeMaterial.slug}`}
+                      className="mt-4 inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 transition-colors"
+                    >
+                      <BookOpen className="w-4 h-4" /> Revisar a apostila
+                    </Link>
+                  )}
                 </>
               )}
             </div>
