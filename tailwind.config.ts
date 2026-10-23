@@ -10,7 +10,6 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        ["image-bombeiros"]: "url(/bg-hero.jpeg)",
         ["image-gallery"]: "url(/bg-gallery.svg)",
         ["image-instructors"]: "url(/bg-instructors.svg)",
         ["image-card-info"]: "url(/bg-contact-card-info.svg)",
